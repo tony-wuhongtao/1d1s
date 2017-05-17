@@ -1,9 +1,10 @@
-# ![](http://1d1s.bon-cloud.cn) One Day One Story 
+![1d1s](http://strdc.bon-cloud.cn/images/Logo.png) 
+#One Day One Story 
 
 
-[![Bon-Cloud](http://www.bon-cloud.cn/assets/base/img/layout/logos/BON-Logo.png)](http://www.bon-cloud.cn) [![Bon Premium](http://premium.bon-cloud.net/sites/default/files/Bon-Cloud-logo.png)](http://premium.bon-cloud.net/) 
+[![Bon-Cloud](http://www.bon-cloud.cn/assets/base/img/layout/logos/BON-Logo.png)](http://premium.bon-cloud.net/)) 
 
-The Website was customized based on Grav CMS.
+##The Website was customized based on Grav CMS.
 ___
 Grav is a **Fast**, **Simple**, and **Flexible**, file-based Web-platform.  There is **Zero** installation required.  Just extract the ZIP archive, and you are already up and running.  It follows similar principles to other flat-file CMS platforms, but has a different design philosophy than most. Grav comes with a powerful **Package Management System** to allow for simple installation and upgrading of plugins and themes, as well as simple updating of Grav itself.
 
