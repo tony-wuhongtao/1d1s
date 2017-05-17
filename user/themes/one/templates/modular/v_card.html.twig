@@ -1,0 +1,87 @@
+<!--==========================================
+                   V-CARD
+===========================================-->
+<div id="v-card-holder" class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+
+                <!-- V-CARD -->
+                <div id="v-card" class="card">
+
+                    <!-- PROFILE PICTURE -->
+                    <div id="profile" class="right">
+                        <img alt="profile-image" class="img-responsive" src="{{theme_url}}/libs/images/profile/profile.png">
+                        <div class="slant"></div>
+
+                        <!--EMPTY PLUS BUTTON-->
+                        <!--<div class="btn-floating btn-large add-btn"><i class="material-icons">add</i></div>-->
+
+                        <!--VIDEO PLAY BUTTON-->
+                        <div id="button-holder" class="btn-holder">
+                            <div id="play-btn" class="btn-floating btn-large btn-play">
+                                <i id="icon-play" class="material-icons">play_arrow</i>
+                            </div>
+                        </div>
+                    </div>
+                    <!--VIDEO CLOSE BUTTON-->
+                    <div id="close-btn" class="btn-floating icon-close">
+                        <i class="fa fa-close"></i>
+                    </div>
+
+                    <div class="card-content">
+
+                        <!-- NAME & STATUS -->
+                        <div class="info-headings">
+                            <h4 class="text-uppercase left">John DOE</h4>
+                            <h6 class="text-capitalize left">Software Engineer & UI/UX Expert</h6>
+                        </div>
+
+                        <!-- CONTACT INFO -->
+                        <div class="infos">
+                            <ul class="profile-list">
+                                <li class="clearfix">
+                                    <span class="title"><i class="material-icons">email</i></span>
+                                    <span class="content">email@mailprovider.com</span>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="title"><i class="material-icons">language</i></span>
+                                    <span class="content">yourpersonalwebsite.com</span>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="title"><i class="fa fa-skype" aria-hidden="true"></i></span>
+                                    <span class="content">yourusername@skype.com</span>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="title"><i class="material-icons">phone</i></span>
+                                    <span class="content">+152 25634 254 846</span>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="title"><i class="material-icons">place</i></span>
+                                    <span class="content">LampStreet 34/3, London, UK</span>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <!--LINKS-->
+                        <div class="links">
+                            {% for social in page.header.social_medias %}
+                            <a href="{{social.url}}"
+                               class="social btn-floating {{social.css_class}}"><i
+                                    class="fa fa-{{social.icon}}"></i></a>
+                            {% endfor %}                     
+                        </div>
+                    </div>
+                    <!--HTML 5 VIDEO-->
+                    <video id="html-video" class="video" poster="{{theme_url}}/libs/images/poster/poster.jpg" controls>
+                        <!--SERVER HOSTED VIDEO-->
+                        <source src="videos/......" type="video/webm">
+                        <source src="videos/......" type="video/mp4">
+                    </video>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+# Grav Specific
+backup/*
+!backup/.*
+cache/*
+!cache/.*
+assets/*
+!assets/.*
+logs/*
+!logs/.*
+images/*
+!images/.*
+user/localhost/config/security.yaml
+user/config/security.yaml

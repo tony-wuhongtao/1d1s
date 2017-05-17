@@ -1,0 +1,11 @@
+email: wuhongtao@bon-cloud.com
+fullname: Tony
+title: Admin
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$/nwVRwOQ7aQ2yVJWmdK7lex39/WHVUIVXdwce5jDS3l6e3EeJ1W.a
