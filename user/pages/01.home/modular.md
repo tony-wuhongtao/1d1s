@@ -5,5 +5,6 @@ content:
     order:
         by: folder
         dir: asc
+published: true
 ---
 
