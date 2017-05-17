@@ -2,7 +2,7 @@
 #One Day One Story 
 
 
-[![Bon-Cloud](http://www.bon-cloud.cn/assets/base/img/layout/logos/BON-Logo.png)](http://premium.bon-cloud.net/)) 
+[![Bon-Cloud](http://www.bon-cloud.cn/assets/base/img/layout/logos/BON-Logo.png)](http://premium.bon-cloud.net/)
 
 ##The Website was customized based on Grav CMS.
 ___
