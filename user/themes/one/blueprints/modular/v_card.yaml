@@ -24,3 +24,14 @@ form:
                 .css_class:
                   type: text
                   label: CSS Class
+        content:
+          fields:
+            header.v_card_title:
+              type: text
+              label: Main Title  
+            header.v_card_sub_title:
+              type: text
+              label: Sub Title           
+            uploads:
+              label: Card Image (first one will be displayed)
+        

@@ -11,7 +11,14 @@
 
                     <!-- PROFILE PICTURE -->
                     <div id="profile" class="right">
-                        <img alt="profile-image" class="img-responsive" src="{{theme_url}}/libs/images/profile/profile.png">
+                        {% set image = page.media.images|first %}
+                        {% if image %}                            
+                            <img alt="profile-image" class="img-responsive" src="{{ image.cropZoom(400,400).url }}">
+                        {% else %}
+                            <img alt="profile-image" class="img-responsive" src="{{theme_url}}/libs/images/profile/profile.png">
+                        {% endif %}
+
+                        
                         <div class="slant"></div>
 
                         <!--EMPTY PLUS BUTTON-->
@@ -33,35 +40,15 @@
 
                         <!-- NAME & STATUS -->
                         <div class="info-headings">
-                            <h4 class="text-uppercase left">John DOE</h4>
-                            <h6 class="text-capitalize left">Software Engineer & UI/UX Expert</h6>
+                            <h4 class="text-uppercase left">{{ header.v_card_title }}</h4>
+                            <h6 class="text-capitalize left">{{ header.v_card_sub_title }}</h6>
                         </div>
 
                         <!-- CONTACT INFO -->
                         <div class="infos">
-                            <ul class="profile-list">
-                                <li class="clearfix">
-                                    <span class="title"><i class="material-icons">email</i></span>
-                                    <span class="content">email@mailprovider.com</span>
-                                </li>
-                                <li class="clearfix">
-                                    <span class="title"><i class="material-icons">language</i></span>
-                                    <span class="content">yourpersonalwebsite.com</span>
-                                </li>
-                                <li class="clearfix">
-                                    <span class="title"><i class="fa fa-skype" aria-hidden="true"></i></span>
-                                    <span class="content">yourusername@skype.com</span>
-                                </li>
-                                <li class="clearfix">
-                                    <span class="title"><i class="material-icons">phone</i></span>
-                                    <span class="content">+152 25634 254 846</span>
-                                </li>
-                                <li class="clearfix">
-                                    <span class="title"><i class="material-icons">place</i></span>
-                                    <span class="content">LampStreet 34/3, London, UK</span>
-                                </li>
-
-                            </ul>
+                            <div class="profile-list">
+                                <span class="content left">{{ content }}</span>
+                            </div>
                         </div>
 
                         <!--LINKS-->
