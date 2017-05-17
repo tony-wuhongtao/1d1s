@@ -1,0 +1,79 @@
+<!-- Modal -->
+<div class="modal1 mfp-hide" id="advModal">
+	<div class="block divcenter" style="background-color: #FFF; max-width: 700px;">
+		<form id="login-form" name="login-form" class="nobottommargin" action="#" method="post">
+			<div class="center" style="padding: 50px 50px 0;">
+				<div class="col_full" style="margin-bottom: 0px;">
+
+					<div class="col_one_fourth">
+						<img src="{{theme_url}}/libs/images/custom/bottom-logo.png">
+					</div>
+					<div class="col_half">
+						<h3>谁是今日千万亿?</h3>
+					</div>
+					<div class="col_one_fourth col_last">
+						
+					</div>
+					<div class="clear"></div>
+				</div>
+				
+				<div class="col_full" style="margin-bottom: 20px;text-align: left;">
+					<p class="nobottommargin">“千万亿平台”专注于中国故事的全球传播，以创新的融媒体平台模式，以规模化之路向全球传播中国文化。</p>
+				</div>
+
+				<div class="col_full">
+					<ul style="list-style: none;text-align: left;">
+                        <li>地 址：北京市朝阳区东八里庄1号莱锦创意产业园CN16蓝海电视大楼</li>
+                        <li>电 话：010-5227 0866</li>
+                        <li>传 真：010-5227 0999</li>
+                        <li>邮 箱：sales@bon-cloud.com</li>
+                    </ul>
+				</div>
+
+				<div class="col_full">
+
+					<div class="col_half" style="margin-bottom: 5px;">
+
+						<div class="col_full" style="margin-bottom: 5px;">
+							<input type="text" id="login-form-username" name="login-form-username" value="" class="form-control" placeholder="姓名/单位名称">
+						</div>
+					</div>
+					<div class="col_half col_last" style="margin-bottom: 5px;">
+
+						<div class="col_full" style="margin-bottom: 5px;">
+							<input type="text" id="login-form-telephone" name="login-form-telephone" value="" class="form-control" placeholder="邮件/手机">
+						</div>
+					</div>
+
+					<div class="col_full">
+						<textarea class="form-control" name="login-form-message" id="exampleInput" placeholder="留言"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="section-modal center nomargin" style="padding: 30px;">
+				<button class="button nomargin" id="login-form-submit" name="login-form-submit" value="login">提交</button>
+				<a href="#" class="button" onClick="$.magnificPopup.close();return false;">关闭</a>
+			</div>
+		</form>
+	</div>
+</div>
+<div class="center">
+	<a id="modal-btn" href="#advModal" data-lightbox="inline" class="button button-large button-rounded">Trigger Modal</a>
+</div>
+{% block javascripts %}
+{% do assets.addInlineJs("
+	$(document).ready(function(){
+		$('body').bind('DOMMouseScroll mousewheel', function(e){
+			$(window).on('scroll',function() {
+	        // if ($(window).scrollTop() > $('container').position().top) {
+	        if ($(window).scrollTop() > 100) {
+				$('#modal-btn').click();
+				$(window).unbind('scroll');
+				$('body').unbind('DOMMouseScroll mousewheel');
+	        }
+     	});
+
+		});
+		
+	});", 88) %}
+{% endblock %}

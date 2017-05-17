@@ -5,8 +5,8 @@ buttons:
         text: 文档下载
         url: '#'
     -
-        text: 我要参加
-        url: '#'
+        text: 我有故事
+        url: '#advModal'
 ---
 
 This is a video about something
