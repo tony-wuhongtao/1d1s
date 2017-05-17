@@ -2,6 +2,7 @@
 title: v-card
 v_card_title: 神秘的布达拉宫
 v_card_sub_title: 'The Mysterious Potala Palace'
+v_card_vid: 51ed3b4e3806b746275ea9335c289037_5
 social_medias:
     -
         icon: twitter

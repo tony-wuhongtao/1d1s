@@ -60,6 +60,7 @@
                             {% endfor %}                     
                         </div>
                     </div>
+                    <div id="vid" style="display:none">{{header.v_card_vid}}</div>
                     <!--HTML 5 VIDEO-->
                     <!-- <video id="html-video" class="video" poster="{{theme_url}}/libs/images/poster/poster.jpg" controls>
                         
@@ -68,6 +69,29 @@
                     </video> -->
                     
                     <div id='html-video' style="position: absolute;z-index: 2"></div>
+
+                    {% block javascripts %}
+                    <script src='//player.polyv.net/script/polyvplayer.min.js'></script>
+                    {% do assets.addInlineJs("var vcardWidth = $('#v-card').width();
+                        var videoHeight = vcardWidth/16*9;
+                        var vid = $('#vid').text();
+                        console.log(vid);
+                        var player = polyvObject('#html-video').videoPlayer({
+                            'width' : vcardWidth,
+                            'height' : videoHeight,
+                            'vid' : vid
+                        });
+
+                        function resume()
+                        {
+                          player.j2s_resumeVideo();
+                        }
+                          
+                        function pause()
+                        {
+                          player.j2s_pauseVideo();
+                        }", 99) %}
+                    {% endblock %}
                     
                 </div>
             </div>

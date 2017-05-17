@@ -31,7 +31,10 @@ form:
               label: Main Title  
             header.v_card_sub_title:
               type: text
-              label: Sub Title           
+              label: Sub Title  
+            header.v_card_vid:
+              type: text
+              label: VID(get from polyv)        
             uploads:
               label: Card Image (first one will be displayed)
         
