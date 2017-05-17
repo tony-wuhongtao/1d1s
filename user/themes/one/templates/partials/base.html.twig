@@ -47,7 +47,6 @@
     {% endblock %}
     {{ assets.css() }}
 
-
 {% endblock head%}
 </head>
 <body id="top" class="{{ page.header.body_classes }}">
@@ -120,6 +119,24 @@
 {% block javascripts %}
     <script src='//player.polyv.net/script/polyvplayer.min.js'></script>
     {% do assets.addJs('theme://libs/javascript/vendors/jquery-2.1.3.min.js', 100) %}
+    {% do assets.addInlineJs("var vcardWidth = $('#v-card').width();
+        var videoHeight = vcardWidth/16*9;
+
+        var player = polyvObject('#html-video').videoPlayer({
+            'width' : vcardWidth,
+            'height' : videoHeight,
+            'vid' : '51ed3b4e3806b746275ea9335c289037_5'
+        });
+
+        function resume()
+        {
+          player.j2s_resumeVideo();
+        }
+          
+        function pause()
+        {
+          player.j2s_pauseVideo();
+        }", 99) %}
     {% do assets.addJs('theme://libs/javascript/vendors/bootstrap.min.js', 98) %}
     {% do assets.addJs('theme://libs/javascript/vendors/materialize.min.js', 97) %}
     {% do assets.addJs('theme://libs/javascript/vendors/markerwithlabel.min.js', 96) %}
@@ -128,7 +145,9 @@
     {% do assets.addJs('theme://libs/javascript/vendors/swiper.jquery.min.js', 93) %}
     {% do assets.addJs('theme://libs/javascript/vendors/jquery.magnific-popup.min.js', 92) %}
     {% do assets.addJs('theme://libs/javascript/custom.js', 91) %}
+
 {% endblock %}
+
 {{ assets.js() }}
 
 </body>
