@@ -1,5 +1,5 @@
 absolute_urls: false
-param_sep: ':'
+param_sep: ;
 wrapped_site: false
 reverse_proxy_setup: false
 force_ssl: false

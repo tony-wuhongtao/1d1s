@@ -1,0 +1,80 @@
+title: feedback
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        feedback:
+          type: tab
+          title: Feedback
+          fields:
+            header.feedbacks:
+              name: feedbacks
+              type: list
+              label: Feedback Items
+              fields:
+                .dev_1:
+                  type: section
+                  title: Feedback Item
+                  underline: true
+                .title:
+                  type: text
+                  label: Title
+                .sub_title:
+                  type: text
+                  label: Sub Title
+                .content:
+                  type: textarea
+                  label: Feedback content
+                .letter:
+                  type: text
+                  label: Big letter( Just support One letter )
+                .use_default_icon:
+                  type: toggle
+                  highlight: 1
+                  label: Use Default Icon ?
+                  default: 1
+                  options:
+                    1: Yes
+                    0: No 
+                .use_custom_icon:
+                  type: toggle
+                  highlight: 1
+                  default: 0
+                  label: Use Custom Icon ?
+                  options:
+                    1: Yes
+                    0: No 
+                .custom_icon:
+                  type: text
+                  label: fa icon name  (ref:http://fontawesome.io/icon/picture-o/)
+
+                .dev_2:
+                  type: section
+                  underline: true
+                .full_content:
+                  type: textarea
+                  label: Feedback full content
+                .image:
+                  type: file
+                  label: Picture(Only one picture)
+                  multiple: false
+                  destination: 'self@'
+                  accept:
+                    - image/*
+                .type:
+                  type: select
+                  size: medium
+                  classes: fancy
+                  label: Select Style
+                  options:
+                    s1: Style 1
+                    s2: Style 2
+                    s3: Style 3
+                  
+                
+
+
+
+        

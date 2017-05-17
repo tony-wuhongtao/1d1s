@@ -9,6 +9,53 @@
         </div>
 
         <div id="timeline-education">
+            <!-- Feadback Items -->
+            {% for item in header.feedbacks %}
+            <div class="timeline-block">
+                <!-- DOT -->
+                <div class="timeline-dot">
+                    {% if item.use_default_icon == 0 %}
+                         
+                        {% if item.use_custom_icon == 1 and item.custom_icon %}    
+                            <i class="fa fa-{{ item.custom_icon }}"></i> 
+                        {% elseif item.letter %}
+                            <h6>{{ item.letter }}</h6>
+                        {% endif %}
+                    {% else %}
+                        <i class="fa fa-commenting"></i>
+                    {% endif %}
+
+                </div>
+                <!-- ITEM CONTENT -->
+                <div class="card timeline-content">
+                    <div class="card-content">
+                        <!-- TIMELINE TITLE -->
+                        <h6 class="timeline-title">{{ item.title }}</h6>
+                        <!-- TIMELINE TITLE INFO -->
+                        <div class="timeline-info">
+                            <h6>
+                                <small>{{ item.sub_title }}</small>
+                            </h6>
+                        </div>
+                        <!-- TIMELINE PARAGRAPH -->
+                        <p>
+                            {{ item.content }}
+                        </p>
+                        <!-- BUTTON TRIGGER MODAL -->
+                        <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-1">
+                            {% if item.type == 's1' %}
+                                <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                            {% elseif item.type == 's2' %}
+                                <i class="fa fa-picture-o" aria-hidden="true"></i>
+                            {% else %}
+                                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                            {% endif %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+            <!-- Feadback Items End -->
 
             <!-- FIRST TIMELINE -->
             <div class="timeline-block">
