@@ -1142,7 +1142,7 @@ body.scale-effect {
         height: auto;
         margin-top: 33px; }
       #timeline-education .timeline-block .timeline-content .pPaddingTop {
-        margin-top: 0px; }
+        margin-top: 40px; }
     #timeline-education .timeline-block:nth-child(even) .timeline-content {
       /*content to right*/
       float: right; }
@@ -1902,119 +1902,119 @@ POPUP ANIMATIONS
  BLOG SECTION
 -------------------------------------------------------------------------------*/
 /*blog section*/
-#blog .container {
+#blog {
   margin-top: -300px; }
-#blog .blog {
-  /*blog class*/
-  position: relative;
-  height: 21em; }
-  #blog .blog:after {
-    clear: both;
-    content: '';
-    display: block; }
-  #blog .blog:before {
-    background: blue;
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle; }
-  #blog .blog .content {
-    /*blog content*/
-    display: inline-block;
-    padding: 40px;
-    vertical-align: middle;
-    width: 49.3%; }
-    #blog .blog .content:last-child {
-      margin: 0 2px 0 -2px; }
-    #blog .blog .content h6 {
-      /*blog header*/
-      margin-bottom: 0.5em;
-      margin-top: 1em;
-      text-transform: uppercase; }
-    #blog .blog .content .breadcrumb {
-      padding: 0;
-      background: none;
-      font-size: 15px; }
-    #blog .blog .content a {
-      /*read more link*/
-      border-bottom: 1px solid gainsboro; }
-  #blog .blog .image {
-    /*blog image*/
-    display: inline-block;
-    height: 100%;
-    width: 50%;
-    overflow: hidden;
-    position: relative; }
-    #blog .blog .image:hover .image-overlay {
-      /*overlay effect*/
-      opacity: 1;
-      z-index: 22; }
-    #blog .blog .image:hover img {
-      /*image hover*/
-      transform: scale(1.05);
-      -webkit-transform: scale(1.05); }
-    #blog .blog .image:hover .comments {
-      /*image hover*/
-      bottom: 0; }
-    #blog .blog .image img {
-      /*blog image*/
-      display: block;
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      z-index: 1;
-      transition: .5s;
-      -webkit-transition: 0.5s; }
-  #blog .blog .image-overlay {
-    /*blog image overlay*/
-    position: absolute;
-    background: rgba(0, 0, 0, 0.3);
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: .5s; }
-    #blog .blog .image-overlay .comments {
-      font-size: 13px;
-      padding: 0 12px 8px 14px;
-      position: absolute;
-      right: 0;
-      bottom: -20%;
-      z-index: 3;
-      color: #fff;
-      transition: .5s; }
-      #blog .blog .image-overlay .comments i {
-        margin-left: 6px; }
-#blog .odd {
-  /*blog odd property*/
-  text-align: left; }
-  #blog .odd .image {
-    float: left; }
-    #blog .odd .image img {
-      right: 0;
-      top: 0; }
-#blog .even {
-  /*blog even property*/
-  text-align: right; }
-  #blog .even .image {
-    float: right; }
-    #blog .even .image img {
-      left: 0;
-      top: 0; }
-@media screen and (max-width: 768px) {
   #blog .blog {
     /*blog class*/
-    display: block;
-    height: auto; }
-    #blog .blog:last-child {
-      margin-bottom: 0; }
-    #blog .blog .image {
-      /*image*/
-      height: 20em;
-      width: 100%; }
+    position: relative;
+    height: 21em; }
+    #blog .blog:after {
+      clear: both;
+      content: '';
+      display: block; }
+    #blog .blog:before {
+      background: blue;
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle; }
     #blog .blog .content {
       /*blog content*/
-      text-align: center;
-      width: 100%; } }
+      display: inline-block;
+      padding: 40px;
+      vertical-align: middle;
+      width: 49.3%; }
+      #blog .blog .content:last-child {
+        margin: 0 2px 0 -2px; }
+      #blog .blog .content h6 {
+        /*blog header*/
+        margin-bottom: 0.5em;
+        margin-top: 1em;
+        text-transform: uppercase; }
+      #blog .blog .content .breadcrumb {
+        padding: 0;
+        background: none;
+        font-size: 15px; }
+      #blog .blog .content a {
+        /*read more link*/
+        border-bottom: 1px solid gainsboro; }
+    #blog .blog .image {
+      /*blog image*/
+      display: inline-block;
+      height: 100%;
+      width: 50%;
+      overflow: hidden;
+      position: relative; }
+      #blog .blog .image:hover .image-overlay {
+        /*overlay effect*/
+        opacity: 1;
+        z-index: 22; }
+      #blog .blog .image:hover img {
+        /*image hover*/
+        transform: scale(1.05);
+        -webkit-transform: scale(1.05); }
+      #blog .blog .image:hover .comments {
+        /*image hover*/
+        bottom: 0; }
+      #blog .blog .image img {
+        /*blog image*/
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        transition: .5s;
+        -webkit-transition: 0.5s; }
+    #blog .blog .image-overlay {
+      /*blog image overlay*/
+      position: absolute;
+      background: rgba(0, 0, 0, 0.3);
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: .5s; }
+      #blog .blog .image-overlay .comments {
+        font-size: 13px;
+        padding: 0 12px 8px 14px;
+        position: absolute;
+        right: 0;
+        bottom: -20%;
+        z-index: 3;
+        color: #fff;
+        transition: .5s; }
+        #blog .blog .image-overlay .comments i {
+          margin-left: 6px; }
+  #blog .odd {
+    /*blog odd property*/
+    text-align: left; }
+    #blog .odd .image {
+      float: left; }
+      #blog .odd .image img {
+        right: 0;
+        top: 0; }
+  #blog .even {
+    /*blog even property*/
+    text-align: right; }
+    #blog .even .image {
+      float: right; }
+      #blog .even .image img {
+        left: 0;
+        top: 0; }
+  @media screen and (max-width: 768px) {
+    #blog .blog {
+      /*blog class*/
+      display: block;
+      height: auto; }
+      #blog .blog:last-child {
+        margin-bottom: 0; }
+      #blog .blog .image {
+        /*image*/
+        height: 20em;
+        width: 100%; }
+      #blog .blog .content {
+        /*blog content*/
+        text-align: center;
+        width: 100%; } }
 
 /*-------------------------------------------------------------------------------
  CONTACT SECTION
