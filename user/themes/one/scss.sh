@@ -1,2 +1,2 @@
 #!/bin/sh
-scss --watch libs/stylesheets:libs/stylesheets
+sass --watch libs/stylesheets/:libs/stylesheets/

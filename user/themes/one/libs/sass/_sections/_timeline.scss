@@ -70,6 +70,36 @@
         color: $accent-color-dark;
       }
     }
+    .noPaddingLeft{
+      padding-left: 0 !important;
+    }
+        
+    .feedback-image{
+      width: 100%;
+      height: auto;
+    }
+    .author-info{
+      text-align: right;
+
+      .author-name{
+        small{
+          &:before{
+            content: '-';
+          }
+        }
+      }
+      small{
+        span{
+          display: block;
+          font-weight: normal;
+          color: #999;
+          font-size: 12px;
+          text-transform: none;
+          padding-left: 10px;
+        }
+      }
+    }
+
   }
 
   .timeline-dot {

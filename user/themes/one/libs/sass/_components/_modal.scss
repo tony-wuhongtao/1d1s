@@ -15,8 +15,13 @@
       padding: 0 40px;
       text-align: justify;
       img{
-        padding-top: 10px;
+        // padding-top: 10px;
+        width: 100%;
+        height: auto;
         padding-bottom: 10px;
+      }
+      .modal-title {
+          font-size: 1.6rem;
       }
     }
     .modal-header {
@@ -25,6 +30,13 @@
       .close:focus, .close:hover {
         color: $accent-color;
         opacity: 1;
+      }
+      .modal-title {
+          font-size: 1.6rem;
+      }
+      .noPadding{
+        margin-top: 0;
+        margin-bottom: 0;
       }
     }
     .modal-footer {

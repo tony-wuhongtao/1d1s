@@ -299,14 +299,22 @@ video {
       padding: 0 40px;
       text-align: justify; }
       .modal .modal-content .modal-body img {
-        padding-top: 10px;
+        width: 100%;
+        height: auto;
         padding-bottom: 10px; }
+      .modal .modal-content .modal-body .modal-title {
+        font-size: 1.6rem; }
     .modal .modal-content .modal-header {
       padding: 15px;
       border-bottom: 0; }
       .modal .modal-content .modal-header .close:focus, .modal .modal-content .modal-header .close:hover {
         color: #1976D2;
         opacity: 1; }
+      .modal .modal-content .modal-header .modal-title {
+        font-size: 1.6rem; }
+      .modal .modal-content .modal-header .noPadding {
+        margin-top: 0;
+        margin-bottom: 0; }
     .modal .modal-content .modal-footer {
       border: 0 !important; }
     .modal .modal-content .btn-default {
@@ -975,6 +983,22 @@ body.scale-effect {
       font-size: 20px; }
       .timeline-block .card-content .modal-dot:hover, .timeline-block .card-content .modal-dot:focus {
         color: #12579b; }
+    .timeline-block .card-content .noPaddingLeft {
+      padding-left: 0 !important; }
+    .timeline-block .card-content .feedback-image {
+      width: 100%;
+      height: auto; }
+    .timeline-block .card-content .author-info {
+      text-align: right; }
+      .timeline-block .card-content .author-info .author-name small:before {
+        content: '-'; }
+      .timeline-block .card-content .author-info small span {
+        display: block;
+        font-weight: normal;
+        color: #999;
+        font-size: 12px;
+        text-transform: none;
+        padding-left: 10px; }
   .timeline-block .timeline-dot {
     /*timeline dot*/
     background: #06A763;
