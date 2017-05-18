@@ -6,6 +6,9 @@
 
 /*blog section*/
 #blog {
+  .container{
+    margin-top: -300px;
+  }
   .blog {
     /*blog class*/
     position: relative;
@@ -23,7 +26,6 @@
       height: 100%;
       vertical-align: middle;
     }
-
     .content {
       /*blog content*/
       display: inline-block;

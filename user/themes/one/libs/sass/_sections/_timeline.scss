@@ -99,6 +99,21 @@
         }
       }
     }
+    .date-box {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      z-index: 1;
+      color: #ffffff;
+      font-size: 1.4rem;
+      min-width: 60px;
+      // line-height: 32px;
+      font-weight: 400;
+      padding-top: 16px;
+      text-align: center;
+      display: inline-block;
+      background-color: $primary-color;
+    }
 
   }
 
@@ -178,6 +193,19 @@
         }
       }
     }
+    .author-portfolio{
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      margin-top: 33px;
+    }
+    .noPaddingLeft{
+      padding-left: 0 !important;
+    }
+    .noPaddingRight{
+      padding-right: 0 !important;
+    }
+      
   }
   @include phone_768 {
     .timeline-content {

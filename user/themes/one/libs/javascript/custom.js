@@ -221,6 +221,8 @@
                     $('#html-video').removeClass('hidden');
                     // htmlVideoEmbed.j2s_resumeVideo();
                     $('#play-btn').addClass('black');
+                }, 1000);
+                setTimeout(function () {
                     var vcardHeight = $('#v-card').height();
                     var videoHeight = $('#html-video').height();
 
@@ -230,8 +232,7 @@
                         var marginTop = (vcardHeight-videoHeight)/2;
                     }
                     $('#html-video').css({ top: marginTop+'px'});
-
-                }, 1000);
+                }, 2000);
                 setTimeout(function () {
                     resume();
                 }, 3000);
