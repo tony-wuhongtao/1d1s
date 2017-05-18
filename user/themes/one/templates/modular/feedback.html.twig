@@ -51,33 +51,6 @@
                     </div>
                 </div>  
 
-                    <!--MODAL FIVE-->
-                <div class="modal fade" id="myModal-{{ loop.index }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-{{ loop.index }}">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <!--MODAL HEADER-->
-                            <div class="modal-header  text-center">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                        aria-hidden="true"><i class="fa fa-close"></i></span></button>
-                                <h4 class="modal-title" id="myModal-{{ loop.index }}">{{ item.title }}</h4>
-                                <h6 class="noPadding">
-                                    <small>{{ item.sub_title }}</small>
-                                </h6>
-                            </div>
-                            <!--MODAL BODY-->
-                            <div class="modal-body">
-                                <img src="{{ big_img.path }}" alt="{{ item.title }}"></img>
-                                {{ item.content }}
-                            </div>
-                            <!--MODAL FOOTER-->
-                            <div class="modal-footer">
-                                <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
                 {% endif %}
 
                 {% if style == 's2' %}
@@ -195,17 +168,19 @@
                     </div>
                     <!-- TIMELINE CONTENT -->
                     <div class="card timeline-content">
-                        <div class="card-content">
-                            <p>
-                                老龄化社会在现今世界各地都是常见问题。关于老年人的每项举措都是有价值的，特别是因为他们是家庭生活的核心。
-                            </p>
-                            <div class="timeline-info author-info">
-                                <h6 class="author-name">
-                                    <small>网友 NONA</small>
-                                </h6>
-                                <!-- <h6>
-                                    <small><span>Jan 2000 - Mar 2005</span></small>
-                                </h6> -->
+                        <div class="col-md-10 noPaddingLeft">
+                            <div class="card-content card-content-noPaddingTop">
+                                <p>
+                                    老龄化社会在现今世界各地都是常见问题。关于老年人的每项举措都是有价值的，特别是因为他们是家庭生活的核心。
+                                </p>
+                                <div class="timeline-info author-info">
+                                    <h6 class="author-name">
+                                        <small>网友 NONA</small>
+                                    </h6>
+                                    <!-- <h6>
+                                        <small><span>Jan 2000 - Mar 2005</span></small>
+                                    </h6> -->
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -223,6 +198,31 @@
                   MODALS
 ===========================================-->
 <section>
+    <!--MODAL FIVE-->
+    <div class="modal fade" id="myModal-{{ loop.index }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-{{ loop.index }}">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <!--MODAL HEADER-->
+                <div class="modal-header  text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true"><i class="fa fa-close"></i></span></button>
+                    <h4 class="modal-title" id="myModal-{{ loop.index }}">{{ item.title }}</h4>
+                    <h6 class="noPadding">
+                        <small>{{ item.sub_title }}</small>
+                    </h6>
+                </div>
+                <!--MODAL BODY-->
+                <div class="modal-body">
+                    <img src="{{ big_img.path }}" alt="{{ item.title }}"></img>
+                    {{ item.content }}
+                </div>
+                <!--MODAL FOOTER-->
+                <div class="modal-footer">
+                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
     <!--MODAL ONE-->
     <div class="modal fade" id="myModal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-1">
         <div class="modal-dialog modal-lg" role="document">
