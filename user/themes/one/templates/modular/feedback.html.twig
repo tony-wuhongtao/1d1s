@@ -11,9 +11,14 @@
         <div id="timeline-education">
             <!-- Feadback Items -->
             {% for item in header.feedbacks %}
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot">
+                {% set style = item.style %}
+
+                {% if style == 's1' %}
+                <!-- Report with big image -->
+                <!-- BIG IMAGE REPORT-->
+                <div class="timeline-block">
+                    <!-- DOT -->
+                    <div class="timeline-dot">
                     {% if item.use_default_icon == 0 %}
                          
                         {% if item.use_custom_icon == 1 and item.custom_icon %}    
@@ -24,357 +29,193 @@
                     {% else %}
                         <i class="fa fa-commenting"></i>
                     {% endif %}
-
-                </div>
-                <!-- ITEM CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <!-- TIMELINE TITLE -->
-                        <h6 class="timeline-title">{{ item.title }}</h6>
-                        <!-- TIMELINE TITLE INFO -->
-                        <div class="timeline-info">
-                            <h6>
-                                <small>{{ item.sub_title }}</small>
-                            </h6>
-                        </div>
-                        <!-- TIMELINE PARAGRAPH -->
-                        <p>
-                            {{ item.content }}
-                        </p>
-                        <!-- BUTTON TRIGGER MODAL -->
-                        <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-1">
-                            {% if item.type == 's1' %}
-                                <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                            {% elseif item.type == 's2' %}
+                    </div>
+                    <!-- TIMELINE CONTENT -->
+                    <div class="card timeline-content">
+                        <div class="card-content">
+                            <!-- TIMELINE TITLE -->
+                            <h6 class="timeline-title">{{ item.title }}<a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-{{ loop.index }}">
                                 <i class="fa fa-picture-o" aria-hidden="true"></i>
-                            {% else %}
-                                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                            {% endif %}
-                        </a>
+                            </a></h6>
+                            <!-- TIMELINE TITLE INFO -->
+                            <div class="timeline-info">
+                                <h6>
+                                    <small>{{ item.sub_title }}</small>
+                                </h6>
+                            </div>
+                            {% set big_img = item.big_image|first %}
+                            <img class="feedback-image"  src="{{ big_img.path }}">
+                            <div class="clearfix"></div>
+                            
+                        </div>
                     </div>
-                </div>
-            </div>
-        {% endfor %}
-            <!-- Feadback Items End -->
+                </div>  
 
-            <!-- FIRST TIMELINE -->
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><i class="fa fa-commenting"></i></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <!-- TIMELINE TITLE -->
-                        <h6 class="timeline-title">Preparatory Education</h6>
-                        <!-- TIMELINE TITLE INFO -->
-                        <div class="timeline-info">
-                            <h6>
-                                <small>Fedrick School</small>
-                            </h6>
-                            <h6>
-                                <small>Jan 1997 - Mar 2000</small>
-                            </h6>
-                        </div>
-                        <!-- TIMELINE PARAGRAPH -->
-                        <p>
-                            I completed my preparatory education from this prestigious institution.
-                            I successful completed all the credits without any fallout and got A grade overall.
-                        </p>
-                        <!-- BUTTON TRIGGER MODAL -->
-                        <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-1">
-                            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- FIRST TIMELINE -->
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><i class="fa fa-commenting"></i></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <!-- TIMELINE TITLE -->
-                        <h6 class="timeline-title">Preparatory Education</h6>
-                        <!-- TIMELINE TITLE INFO -->
-                        <div class="timeline-info">
-                            <h6>
-                                <small>Fedrick School</small>
-                            </h6>
-                            <h6>
-                                <small>Jan 1997 - Mar 2000</small>
-                            </h6>
-                        </div>
-                        <!-- TIMELINE PARAGRAPH -->
-                        <p>
-                            I completed my preparatory education from this prestigious institution.
-                            I successful completed all the credits without any fallout and got A grade overall.
-                        </p>
-                        <!-- BUTTON TRIGGER MODAL -->
-                        <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-1">
-                            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- SECOND TIMELINE -->
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><h6>C</h6></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <div class="col-md-7 noPaddingLeft">
-                            <!-- TIMELINE TITLE -->
-                            <h6 class="timeline-title">CNN</h6>
-                            <!-- TIMELINE TITLE INFO -->
-                            <div class="timeline-info">
-                                <h6>
-                                    <small>报道</small>
+                    <!--MODAL FIVE-->
+                <div class="modal fade" id="myModal-{{ loop.index }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-{{ loop.index }}">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <!--MODAL HEADER-->
+                            <div class="modal-header  text-center">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true"><i class="fa fa-close"></i></span></button>
+                                <h4 class="modal-title" id="myModal-{{ loop.index }}">{{ item.title }}</h4>
+                                <h6 class="noPadding">
+                                    <small>{{ item.sub_title }}</small>
                                 </h6>
-                                <h6>
-                                    <small>Jan 2000 - Mar 2005</small>
-                                </h6>
-                                <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-3">
-                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                                </a>
                             </div>
-                            <!-- TIMELINE PARAGRAPH -->
-                            <!-- <p>
-                            报道的具体内容
-                            </p> -->
-                        </div>
-                        <div class="col-md-5 noPaddingLeft">
-                            <img class="feedback-image"  src="{{theme_url}}/libs/images/profile/profile.png">
-                        </div>
-                        <div class="clearfix"></div>
-                        
-                    </div>
-                </div>
-            </div>
-            <!-- SECOND TIMELINE -->
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><h6>C</h6></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <div class="col-md-5 noPaddingLeft">
-                            <img class="feedback-image"  src="{{theme_url}}/libs/images/profile/profile.png">
-                        </div>
-                        <div class="col-md-7 noPaddingLeft">
-                            <!-- TIMELINE TITLE -->
-                            <h6 class="timeline-title">CNN</h6>
-                            <!-- TIMELINE TITLE INFO -->
-                            <div class="timeline-info">
-                                <h6>
-                                    <small>报道</small>
-                                </h6>
-                                <h6>
-                                    <small>Jan 2000 - Mar 2005</small>
-                                </h6>
-                                <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-4">
-                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                                </a>
+                            <!--MODAL BODY-->
+                            <div class="modal-body">
+                                <img src="{{ big_img.path }}" alt="{{ item.title }}"></img>
+                                {{ item.content }}
+                            </div>
+                            <!--MODAL FOOTER-->
+                            <div class="modal-footer">
+                                <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
                             </div>
                         </div>
-                        <div class="clearfix"></div>
-                        
                     </div>
                 </div>
-            </div>
-            <!-- SECOND TIMELINE -->
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><h6>C</h6></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <!-- TIMELINE TITLE -->
-                        <h6 class="timeline-title">CNN报道<a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-5">
-                            <i class="fa fa-picture-o" aria-hidden="true"></i>
-                        </a></h6>
-                        <!-- TIMELINE TITLE INFO -->
-                        <div class="timeline-info">
-                            <h6>
-                                <small>Jan 2000 - Mar 2005</small>
-                            </h6>
+
+
+                {% endif %}
+
+                {% if style == 's2' %}
+                <!-- Report with small image -->
+                <!-- SMALL IMAGE REPORT -->
+                <div class="timeline-block">
+                    <!-- DOT -->
+                    <div class="timeline-dot">
+                    {% if item.use_default_icon == 0 %}
+                         
+                        {% if item.use_custom_icon == 1 and item.custom_icon %}    
+                            <i class="fa fa-{{ item.custom_icon }}"></i> 
+                        {% elseif item.letter %}
+                            <h6>{{ item.letter }}</h6>
+                        {% endif %}
+                    {% else %}
+                        <i class="fa fa-commenting"></i>
+                    {% endif %}
+                    </div>
+                    <!-- TIMELINE CONTENT -->
+                    <div class="card timeline-content">
+                        <div class="card-content">
+                            <div class="col-md-7 noPaddingLeft">
+                                <!-- TIMELINE TITLE -->
+                                <h6 class="timeline-title">CNN</h6>
+                                <!-- TIMELINE TITLE INFO -->
+                                <div class="timeline-info">
+                                    <h6>
+                                        <small>报道</small>
+                                    </h6>
+                                    <h6>
+                                        <small>Jan 2000 - Mar 2005</small>
+                                    </h6>
+                                    <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-3">
+                                        <i class="fa fa-picture-o" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <!-- TIMELINE PARAGRAPH -->
+                                <!-- <p>
+                                报道的具体内容
+                                </p> -->
+                            </div>
+                            <div class="col-md-5 noPaddingLeft">
+                                <img class="feedback-image"  src="{{theme_url}}/libs/images/profile/profile.png">
+                            </div>
+                            <div class="clearfix"></div>
+                            
                         </div>
-                        <img class="feedback-image"  src="{{theme_url}}/libs/images/blog/blog-2.png">
-                        <div class="clearfix"></div>
-                        
                     </div>
-                </div>
-            </div>
-            <!-- SECOND TIMELINE -->
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><h6>H</h6></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <p>
-                            老龄化社会在现今世界各地都是常见问题。关于老年人的每项举措都是有价值的，特别是因为他们是家庭生活的核心。
-                        </p>
-                        <div class="timeline-info author-info">
-                            <h6 class="author-name">
-                                <small>网友 NONA</small>
-                            </h6>
-                            <!-- <h6>
-                                <small><span>Jan 2000 - Mar 2005</span></small>
-                            </h6> -->
+                </div>    
+
+                {% endif %}
+                
+                {% if style == 's3' %}
+                        <!-- Comment with photo -->
+                <!-- COMMENT WITH PHOTO -->
+                <div class="timeline-block">
+                    <!-- DOT -->
+                    <div class="timeline-dot">
+                    {% if item.use_default_icon == 0 %}
+                         
+                        {% if item.use_custom_icon == 1 and item.custom_icon %}    
+                            <i class="fa fa-{{ item.custom_icon }}"></i> 
+                        {% elseif item.letter %}
+                            <h6>{{ item.letter }}</h6>
+                        {% endif %}
+                    {% else %}
+                        <i class="fa fa-commenting"></i>
+                    {% endif %}
+                    </div>
+                    <!-- TIMELINE CONTENT -->
+                    <div class="card timeline-content">
+                        <div class="col-md-2 noPaddingRight">
+                            <img class="author-portfolio" src="{{theme_url}}/libs/images/clients/client-1.png">
+                        </div>
+                        <div class="col-md-10 noPaddingLeft">
+                            <div class="card-content">
+                                <p>
+                                    老龄化社会在现今世界各地都是常见问题。关于老年人的每项举措都是有价值的，特别是因为他们是家庭生活的核心。
+                                </p>
+                                <div class="timeline-info author-info">
+                                    <h6 class="author-name">
+                                        <small>Janusz Szewczak</small>
+                                    </h6>
+                                    <h6>
+                                        <small><span>38，英国，伦敦</span></small>
+                                    </h6>
+                                </div>
+                                <!-- TIMELINE TITLE -->
+                                <!-- <h6 class="timeline-title">High School</h6> -->
+                                <!-- TIMELINE PARAGRAPH -->
+                                
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- SECOND TIMELINE -->
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><h6>H</h6></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="col-md-2 noPaddingRight">
-                        <img class="author-portfolio" src="{{theme_url}}/libs/images/clients/client-1.png">
+                </div>    
+
+                    {% endif %}
+                    {% if style == 's4' %}
+                        <!-- Just Comment -->
+                <!-- JUST COMMENT -->
+                <div class="timeline-block">
+                    <!-- DOT -->
+                    <div class="timeline-dot">
+                    {% if item.use_default_icon == 0 %}
+                         
+                        {% if item.use_custom_icon == 1 and item.custom_icon %}    
+                            <i class="fa fa-{{ item.custom_icon }}"></i> 
+                        {% elseif item.letter %}
+                            <h6>{{ item.letter }}</h6>
+                        {% endif %}
+                    {% else %}
+                        <i class="fa fa-commenting"></i>
+                    {% endif %}
                     </div>
-                    <div class="col-md-10 noPaddingLeft">
+                    <!-- TIMELINE CONTENT -->
+                    <div class="card timeline-content">
                         <div class="card-content">
                             <p>
                                 老龄化社会在现今世界各地都是常见问题。关于老年人的每项举措都是有价值的，特别是因为他们是家庭生活的核心。
                             </p>
                             <div class="timeline-info author-info">
                                 <h6 class="author-name">
-                                    <small>Janusz Szewczak</small>
+                                    <small>网友 NONA</small>
                                 </h6>
-                                <h6>
-                                    <small><span>38，英国，伦敦</span></small>
-                                </h6>
+                                <!-- <h6>
+                                    <small><span>Jan 2000 - Mar 2005</span></small>
+                                </h6> -->
                             </div>
-                            <!-- TIMELINE TITLE -->
-                            <!-- <h6 class="timeline-title">High School</h6> -->
-                            <!-- TIMELINE PARAGRAPH -->
-                            
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- THIRD TIMELINE -->
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><h6>C</h6></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <!-- TIMELINE TITLE -->
-                        <h6 class="timeline-title">Computer Science</h6>
-                        <!-- TIMELINE TITLE INFO -->
-                        <div class="timeline-info">
-                            <h6>
-                                <small>Down Street College</small>
-                            </h6>
-                            <h6>
-                                <small>Jan 2006 - Mar 2008</small>
-                            </h6>
-                        </div>
-                        <!-- TIMELINE PARAGRAPH -->
-                        <p>
-                            I completed my computer science degree from this prestigious institution.
-                            I successful completed all the credits without any fallout and got A grade overall.
-                        </p>
+                    {% endif %}
 
-                    </div>
-                </div>
-            </div>
-
-            <!-- FOURTH TIMELINE -->
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><i class="fa fa-commenting"></i></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <!-- TIMELINE TITLE -->
-                        <h6 class="timeline-title">Software Engineering</h6>
-                        <!-- TIMELINE TITLE INFO -->
-                        <div class="timeline-info">
-                            <h6>
-                                <small>Oxford University</small>
-                            </h6>
-                            <h6>
-                                <small>Jan 2009 - Mar 2010</small>
-                            </h6>
-                        </div>
-                        <!-- TIMELINE PARAGRAPH -->
-                        <p>
-                            I completed this degree from this prestigious institution.
-                            I successful completed all the credits without any fallout and got A grade overall.
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-            <!-- FIFTH TIMELINE -->
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><h6>U</h6></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <!-- TIMELINE TITLE -->
-                        <h6 class="timeline-title">UI/UX Workshop</h6>
-                        <!-- TIMELINE TITLE INFO -->
-                        <div class="timeline-info">
-                            <h6>
-                                <small>IT Next Academy</small>
-                            </h6>
-                            <h6>
-                                <small>Jan 2010 - Mar 2011</small>
-                            </h6>
-                        </div>
-                        <!-- TIMELINE PARAGRAPH -->
-                        <p>
-                            I completed this course from this prestigious institution.
-                            I successful completed all the credits without any fallout and got A grade overall.
-                        </p>
-                        <!-- BUTTON TRIGGER MODAL -->
-                        <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-2">
-                            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- SIXTH TIMELINE -->
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><i class="fa fa-globe"></i></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <!-- TIMELINE TITLE -->
-                        <h6 class="timeline-title">Web Development</h6>
-                        <!-- TIMELINE TITLE INFO -->
-                        <div class="timeline-info">
-                            <h6>
-                                <small>Lipro University</small>
-                            </h6>
-                            <h6>
-                                <small>Jan 2011 - Mar 2012</small>
-                            </h6>
-                        </div>
-                        <!-- TIMELINE PARAGRAPH -->
-                        <p>
-                            I completed this course from this prestigious institution.
-                            I successful completed all the credits without any fallout and got A grade overall.
-                        </p>
-                        <!-- BUTTON TRIGGER MODAL -->
-                        <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-3">
-                            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
+            {% endfor %}
         </div>
+
     </div>
 </section>
 
@@ -521,35 +362,7 @@
         </div>
     </div>
 
-    <!--MODAL FIVE-->
-    <div class="modal fade" id="myModal-5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-5">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <!--MODAL HEADER-->
-                <div class="modal-header  text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true"><i class="fa fa-close"></i></span></button>
-                    <h4 class="modal-title" id="myModalLabel-5">人工智能的路，被贤二“和尚”缩短了</h4>
-                    <h6 class="noPadding">
-                        <small>Jan 2014 - Mar 2015</small>
-                    </h6>
-                </div>
-                <!--MODAL BODY-->
-                <div class="modal-body">
-                    <img src="{{theme_url}}/libs/images/blog/blog-2.png" alt="demo"></img>
-                    <p>
-                        在当代中国利用高科技弘扬中国传统文化的有趣故事。<br>
-                        一个呆萌的机器人在网上火了。和普通机器人一样，它身高近60厘米，能跟人语音对话，能明白简单的指令；但不同的是，它身穿黄色僧袍，会说佛经佛法，还动不动就说“我去问问我师父”。
-                    </p>
-                    </p>
-                </div>
-                <!--MODAL FOOTER-->
-                <div class="modal-footer">
-                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-                </div>
-            </div>
-        </div>
-    </div>
+
 </section>
 
 {% block javascripts %}

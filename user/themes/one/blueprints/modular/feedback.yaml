@@ -20,13 +20,56 @@ form:
                   underline: true
                 .title:
                   type: text
-                  label: Title
+                  label: Report itle
                 .sub_title:
                   type: text
-                  label: Sub Title
+                  label: Report sub title
                 .content:
                   type: textarea
                   label: Feedback content
+                .big_image:
+                  type: file
+                  label: Big Image(Only one 800x500)
+                  multiple: false
+                  destination: 'self@'
+                  accept:
+                    - image/*
+                .small_image:
+                  type: file
+                  label: Small Image(Only one 400x400)
+                  multiple: false
+                  destination: 'self@'
+                  accept:
+                    - image/*
+                .comment_title:
+                  type: text
+                  label: Comment title
+                .comment_sub_title:
+                  type: text
+                  label: Comment sub title
+                .coment_content:
+                  type: textarea
+                  label: Comment content
+                .comment_photo:
+                  type: file
+                  label: Comment photo(Only one 150x150)
+                  multiple: false
+                  destination: 'self@'
+                  accept:
+                    - image/*
+                .dev_2:
+                  type: section
+                  underline: true 
+                .style:
+                  type: select
+                  size: medium
+                  classes: fancy
+                  label: Select Style
+                  options:
+                    s1: Report with big image
+                    s2: Report with small image
+                    s3: Comment with photo
+                    s4: Just Comment
                 .use_default_icon:
                   type: toggle
                   highlight: 1
@@ -45,32 +88,12 @@ form:
                     0: No 
                 .custom_icon:
                   type: text
-                  label: fa icon name  (ref:http://fontawesome.io/icon/picture-o/)
+                  label: fa icon name  (http://fontawesome.io/)
                 .letter:
                   type: text
                   label: Big letter( 3rd priority, Only support One letter ) 
-                .dev_2:
-                  type: section
-                  underline: true
-                .full_content:
-                  type: textarea
-                  label: Feedback full content
-                .image:
-                  type: file
-                  label: Picture(Only one picture)
-                  multiple: false
-                  destination: 'self@'
-                  accept:
-                    - image/*
-                .type:
-                  type: select
-                  size: medium
-                  classes: fancy
-                  label: Select Style
-                  options:
-                    s1: Style 1
-                    s2: Style 2
-                    s3: Style 3
+                               
+
                   
                 
 

@@ -2,52 +2,52 @@
 title: feedback
 feedbacks:
     -
-        title: CNN采用了
+        title: BBC采用了
         sub_title: 2017年5月16日CNN采用了这条内容
         content: 'Every field accepts a list of attributes you can use. Each field could share these common attributes, but particular fields might ignore them.'
+        style: s1
         use_default_icon: '0'
         use_custom_icon: '1'
         custom_icon: feed
-        full_content: 'Every field accepts a list of attributes you can use. Each field could share these common attributes, but particular fields might ignore them. The best way to check which attributes are allowed on a field is to check the field description in this page, and see which attributes are mentioned.'
-        type: s2
-        image:
-            user/pages/01.home/03._feedback/cydm1170x563.jpg:
-                name: cydm1170x563.jpg
+        big_image:
+            user/pages/01.history/story5/03._feedback/demo3.jpg:
+                name: demo3.jpg
                 type: image/jpeg
-                size: 473717
-                path: user/pages/01.home/03._feedback/cydm1170x563.jpg
+                size: 35765
+                path: user/pages/01.history/story5/03._feedback/demo3.jpg
     -
-        title: BBC采用了
-        sub_title: 'China''s Elderly on live streaming show'
-        content: 2017年5月17日，BBC早间新闻报道了这条内容。
+        title: CNN报道了
+        sub_title: '2017年5月18日  美国'
+        content: 2017年5月18日BBC早间新闻采用了这个故事
+        style: s2
         use_default_icon: '1'
         use_custom_icon: '0'
-        custom_icon: podcast
-        full_content: 'China''s Elderly on live streaming show，China''s Elderly on live streaming show，China''s Elderly on live streaming show，China''s Elderly on live streaming show，China''s Elderly on live streaming show，China''s Elderly on live streaming show。'
-        type: s2
-        image:
-            user/pages/01.home/03._feedback/zengfengfei2-V2.jpg:
-                name: zengfengfei2-V2.jpg
+        small_image:
+            user/pages/01.history/story5/03._feedback/demo4.jpg:
+                name: demo4.jpg
                 type: image/jpeg
-                size: 366420
-                path: user/pages/01.home/03._feedback/zengfengfei2-V2.jpg
+                size: 60939
+                path: user/pages/01.history/story5/03._feedback/demo4.jpg
     -
-        title: 海外大咖Tony发表评论
-        sub_title: 中国梦好内容
-        content: 'Zeng Fengfei Fashion Show is so cool'
+        comment_title: 'Janusz Szewczak'
+        comment_sub_title: 38，英国，伦敦
+        coment_content: 老龄化社会在现今世界各地都是常见问题。关于老年人的每项举措都是有价值的，特别是因为他们是家庭生活的核心。
+        style: s3
         use_default_icon: '0'
         use_custom_icon: '0'
-        letter: T
-        full_content: 'Let’s meet the designer Zeng Fengfei, who presented his inspiring collection during the Autumn/Winter Fashion show 2015. For this occasion, he was inspired by the famous figure of Maitreya Buddha located in the Mogao Caves in Dunhuang, at the Gansu Province, in China. In this regard, the Mogao Caves, which are also known as the Thousand Buddha Grottoes, have an extension of 25 km, holding an incredible combination of 492 temples in total. Through this video you will be able to get to know this remarkable designer. He will present a part of his extraordinary designs, where he uses different fabrics, patterns and paintings. Let’s wait no more…'
-        type: s1
+        letter: H
+        comment_photo:
+            user/pages/01.history/story5/03._feedback/default_photo.jpg:
+                name: default_photo.jpg
+                type: image/jpeg
+                size: 4297
+                path: user/pages/01.history/story5/03._feedback/default_photo.jpg
     -
-        title: 海外KOL发表评论
-        sub_title: xxxx机构资深媒体人Hello先生
-        content: 这个内容很振奋，我很喜欢
+        comment_title: '网友 NONA'
+        coment_content: 老龄化社会在现今世界各地都是常见问题。关于老年人的每项举措都是有价值的，特别是因为他们是家庭生活的核心。
+        style: s4
         use_default_icon: '0'
         use_custom_icon: '1'
-        letter: K
-        full_content: 'Let’s meet the designer Zeng Fengfei, who presented his inspiring collection during the Autumn/Winter Fashion show 2015. For this occasion, he was inspired by the famous figure of Maitreya Buddha located in the Mogao Caves in Dunhuang, at the Gansu Province, in China. In this regard, the Mogao Caves, which are also known as the Thousand Buddha Grottoes, have an extension of 25 km, holding an incredible combination of 492 temples in total. Through this video you will be able to get to know this remarkable designer. He will present a part of his extraordinary designs, where he uses different fabrics, patterns and paintings. Let’s wait no more…'
-        type: s1
+        custom_icon: binoculars
 ---
 
