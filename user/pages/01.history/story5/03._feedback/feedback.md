@@ -35,28 +35,19 @@ feedbacks:
         title: 海外大咖Tony发表评论
         sub_title: 中国梦好内容
         content: 'Zeng Fengfei Fashion Show is so cool'
-        letter: T
         use_default_icon: '0'
         use_custom_icon: '0'
+        letter: T
         full_content: 'Let’s meet the designer Zeng Fengfei, who presented his inspiring collection during the Autumn/Winter Fashion show 2015. For this occasion, he was inspired by the famous figure of Maitreya Buddha located in the Mogao Caves in Dunhuang, at the Gansu Province, in China. In this regard, the Mogao Caves, which are also known as the Thousand Buddha Grottoes, have an extension of 25 km, holding an incredible combination of 492 temples in total. Through this video you will be able to get to know this remarkable designer. He will present a part of his extraordinary designs, where he uses different fabrics, patterns and paintings. Let’s wait no more…'
         type: s1
     -
         title: 海外KOL发表评论
         sub_title: xxxx机构资深媒体人Hello先生
         content: 这个内容很振奋，我很喜欢
-        letter: K
         use_default_icon: '0'
         use_custom_icon: '1'
+        letter: K
         full_content: 'Let’s meet the designer Zeng Fengfei, who presented his inspiring collection during the Autumn/Winter Fashion show 2015. For this occasion, he was inspired by the famous figure of Maitreya Buddha located in the Mogao Caves in Dunhuang, at the Gansu Province, in China. In this regard, the Mogao Caves, which are also known as the Thousand Buddha Grottoes, have an extension of 25 km, holding an incredible combination of 492 temples in total. Through this video you will be able to get to know this remarkable designer. He will present a part of his extraordinary designs, where he uses different fabrics, patterns and paintings. Let’s wait no more…'
         type: s1
-    -
-        title: 小咖关注了这条新闻
-        sub_title: 小卡小姐发表评论粉丝围观
-        content: 这么好的内容，很难得
-        letter: K
-        use_default_icon: '0'
-        use_custom_icon: '1'
-        full_content: 'Let’s meet the designer Zeng Fengfei, who presented his inspiring collection during the Autumn/Winter Fashion show 2015. For this occasion, he was inspired by the famous figure of Maitreya Buddha located in the Mogao Caves in Dunhuang, at the Gansu Province, in China. In this regard, the Mogao Caves, which are also known as the Thousand Buddha Grottoes, have an extension of 25 km, holding an incredible combination of 492 temples in total. Through this video you will be able to get to know this remarkable designer. He will present a part of his extraordinary designs, where he uses different fabrics, patterns and paintings. Let’s wait no more…'
-        type: s3
 ---
 
