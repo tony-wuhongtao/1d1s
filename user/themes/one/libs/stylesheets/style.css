@@ -1012,6 +1012,8 @@ body.scale-effect {
       text-align: center;
       display: inline-block;
       background-color: #06A763; }
+  .timeline-block .card-content-noPaddingTop {
+    padding-top: 0; }
   .timeline-block .timeline-dot {
     /*timeline dot*/
     background: #06A763;
@@ -1076,13 +1078,16 @@ body.scale-effect {
           color: inherit; }
     .timeline-block .timeline-content .author-portfolio {
       width: 100%;
+      max-width: 50px;
       height: auto;
       border-radius: 50%;
-      margin-top: 33px; }
+      margin-top: 15px; }
     .timeline-block .timeline-content .noPaddingLeft {
       padding-left: 0 !important; }
     .timeline-block .timeline-content .noPaddingRight {
       padding-right: 0 !important; }
+    .timeline-block .timeline-content .pPaddingTop {
+      margin-top: 40px; }
   @media screen and (max-width: 768px) {
     .timeline-block .timeline-content:before {
       /*horizontal line hide at screen size*/
@@ -1106,12 +1111,16 @@ body.scale-effect {
     opacity: 0.4;
     background: #06A763; }
 
-  .timeline-block {
+  #timeline-education .timeline-block {
     /*timeline block in min width 768*/
     margin: -5em 0; }
-    .timeline-block .card {
+    #timeline-education .timeline-block .card {
       margin: 0; }
-    .timeline-block .timeline-dot {
+    #timeline-education .timeline-block:last-of-type {
+      margin-bottom: 0; }
+    #timeline-education .timeline-block:first-of-type {
+      margin-top: 0; }
+    #timeline-education .timeline-block .timeline-dot {
       /*timeline dot in min width 768*/
       width: 50px;
       height: 50px;
@@ -1121,21 +1130,30 @@ body.scale-effect {
       margin-left: -24px;
       -webkit-transform: translateZ(0);
       -webkit-backface-visibility: hidden; }
-    .timeline-block .timeline-content {
+    #timeline-education .timeline-block .timeline-content {
       /*timeline content in min width 768*/
       width: 44%; }
-      .timeline-block .timeline-content .timeline-title {
+      #timeline-education .timeline-block .timeline-content .timeline-title {
         /*timeline title min width 768*/
         max-width: 100%; }
-    .timeline-block:nth-child(even) .timeline-content {
+      #timeline-education .timeline-block .timeline-content .author-portfolio {
+        width: 100%;
+        max-width: 60px;
+        height: auto;
+        margin-top: 33px; }
+      #timeline-education .timeline-block .timeline-content .pPaddingTop {
+        margin-top: 0px; }
+    #timeline-education .timeline-block:nth-child(even) .timeline-content {
       /*content to right*/
       float: right; }
-    .timeline-block:nth-child(even) .timeline-content::before {
+    #timeline-education .timeline-block:nth-child(even) .timeline-content::before {
       /*horizontal line*/
       top: 25px;
       left: auto;
       right: 101.2%;
-      z-index: -2; } }
+      z-index: -2; }
+    #timeline-education .timeline-block .card-content-noPaddingTop {
+      padding-top: 20px; } }
 /*-------------------------------------------------------------------------------
  SKILLS SECTION
 -------------------------------------------------------------------------------*/
