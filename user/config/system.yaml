@@ -13,7 +13,7 @@ languages:
   http_accept_language: false
   override_locale: false
 home:
-  alias: /home
+  alias: /history/story5
   hide_in_urls: false
 pages:
   theme: one
@@ -80,7 +80,7 @@ cache:
   gzip: false
   allow_webserver_gzip: false
 twig:
-  cache: true
+  cache: false
   debug: true
   auto_reload: true
   autoescape: false
@@ -105,7 +105,7 @@ errors:
   display: '1'
   log: true
 debugger:
-  enabled: false
+  enabled: true
   shutdown:
     close_connection: true
   twig: true

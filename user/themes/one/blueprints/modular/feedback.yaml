@@ -27,13 +27,10 @@ form:
                 .content:
                   type: textarea
                   label: Feedback content
-                .letter:
-                  type: text
-                  label: Big letter( Just support One letter )
                 .use_default_icon:
                   type: toggle
                   highlight: 1
-                  label: Use Default Icon ?
+                  label: Use Default Icon ?（1st priority)
                   default: 1
                   options:
                     1: Yes
@@ -42,14 +39,16 @@ form:
                   type: toggle
                   highlight: 1
                   default: 0
-                  label: Use Custom Icon ?
+                  label: Use Custom Icon ?（2nd priority)
                   options:
                     1: Yes
                     0: No 
                 .custom_icon:
                   type: text
                   label: fa icon name  (ref:http://fontawesome.io/icon/picture-o/)
-
+                .letter:
+                  type: text
+                  label: Big letter( 3rd priority, Only support One letter ) 
                 .dev_2:
                   type: section
                   underline: true

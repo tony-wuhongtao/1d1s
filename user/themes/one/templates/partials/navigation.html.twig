@@ -10,17 +10,13 @@
         <br>
 
         <!--OPTIONS-->
-        <a href="#home"><i class="title-icon fa fa-user"></i>Home</a>
-        <a href="#about"><i class="title-icon fa fa-dashboard"></i>About</a>
-        <a href="#feedback"><i class="title-icon fa fa-graduation-cap"></i>Feedback</a>
-        <a href="#skills"><i class="title-icon fa fa-sliders"></i>Skills</a>
-        <a href="#experience"><i class="title-icon fa fa-suitcase"></i>Experience</a>
-        <a href="#portfolios"><i class="title-icon fa fa-archive"></i>Portfolios</a>
-        <a href="#interest"><i class="title-icon fa fa-heart"></i>Interest</a>
-        <a href="#testimonials"><i class="title-icon fa fa-users"></i>Testimonials</a>
-        <a href="#pricing-table"><i class="title-icon fa fa-money"></i>Pricing</a>
-        <a href="#blog"><i class="title-icon fa fa-pencil-square"></i>Blog</a>
-        <a href="#contact"><i class="title-icon fa fa-envelope"></i>Contact</a>
+        <a href="{{ home_url }}/#home"><i class="title-icon fa fa-user"></i>Home</a>
+        {% if page.url == home_url %}
+        <a href="{{ home_url }}/#about"><i class="title-icon fa fa-dashboard"></i>About</a>
+        <a href="{{ home_url }}/#feedback"><i class="title-icon fa fa-graduation-cap"></i>Feedback</a>
+        <a href="{{ home_url }}/#skills"><i class="title-icon fa fa-sliders"></i>Skills</a>
+        {% endif %}
+        <a href="{{ home_url }}/history"><i class="title-icon fa fa-suitcase"></i>History</a>
     </div>
 
     <!-- MENU BUTTON -->

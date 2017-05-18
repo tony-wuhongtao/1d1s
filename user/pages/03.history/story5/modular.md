@@ -1,5 +1,5 @@
 ---
-title: Home
+title: 'Story 5'
 content:
     items: '@self.modular'
     order:
