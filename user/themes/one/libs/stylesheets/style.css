@@ -1996,6 +1996,8 @@ POPUP ANIMATIONS
 /*blog section*/
 #blog {
   margin-top: -300px; }
+  #blog .section-title h4 {
+    color: #fff; }
   #blog .blog {
     /*blog class*/
     position: relative;
