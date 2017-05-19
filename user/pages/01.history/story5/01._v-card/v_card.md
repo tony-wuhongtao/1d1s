@@ -2,6 +2,7 @@
 title: v-card
 v_card_title: 神秘森林
 v_card_sub_title: 'The Mysterious Forest'
+date: '2017-05-19'
 v_card_vid: 51ed3b4e38e17e030e0757343fd3f10a_5
 social_medias:
     -
