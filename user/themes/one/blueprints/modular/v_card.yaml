@@ -34,7 +34,7 @@ form:
               label: Sub Title  
             header.date:
               type: date
-              label: Publish Date
+              label: Date
             header.v_card_vid:
               type: text
               label: VID(get from polyv)        

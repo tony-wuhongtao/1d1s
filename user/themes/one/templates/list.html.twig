@@ -28,15 +28,23 @@
                     			{% set item_content = md.content %}
                     			{% set for_break = true %}
                     		{% endif %}
-							{{ dump(md.slug) }}
+							{{ dump(item_content) }}
                     	{% endfor %}
                     	{% set for_break = false %}
 
 						<div class="blog {% if loop.index is divisibleby(2) %}even {% else %}odd{% endif %}">
 	                        <!--IMAGE-->
 	                        <div class="image">
+	                        	<p class="calendar">{{ item_date|date('d') }}<em>{{ item_date|date('Y年m月') }}</em></p>
 	                            <img alt="blog-image" src="{{ item_img.cropZoom(800,500).url }}"/>
 	                            <div class="image-overlay">
+	                            	<div class="col-md-12 image-overlay-title">
+									  <figure class="port-effect-up">
+									        <figcaption>
+									        	<h4>{{ item_title }}</h4>
+									        </figcaption>
+									  </figure>
+									</div>
 	                                <div class="comments">
 	                                    <i class="fa fa-newspaper-o"></i> Published @
 	                                    <i class="fa fa-date-o"></i>
@@ -47,18 +55,14 @@
 	                        </div>
 	                        <!--DETAILS-->
 	                        <div class="content">
-	                            {# <ol class="breadcrumb">
-	                                <li><a href="#">Frontend</a></li>
-	                                <li><a href="#">Design</a></li>
-	                                <li class="active">Material</li>
-	                            </ol> #}
-
+	                            <ol class="breadcrumb">
+	                                <!-- <li><a href="#">Frontend</a></li>
+	                                <li><a href="#">Design</a></li> -->
+	                                <li class="active">{{ item_date|date('Y年m月d日') }}</li>
+	                            </ol>
 	                            <h6>{{ item_title }}</h6>
-	                            {{ item_content |truncate(200, true)}}
-
-	                            
 	                            <p>
-	                                
+	                                {# {{ item_content |truncate(200, true)}} #}
 	                            </p>
 	                            <a class="forward" href="{{item.url}}">Read More</a>
 	                        </div>

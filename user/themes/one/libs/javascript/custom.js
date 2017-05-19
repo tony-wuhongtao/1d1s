@@ -425,8 +425,8 @@
         sr.reveal('#v-card-holder', {duration: 1400, distance: '150px'});
         sr.reveal('.skillbar-bar', {duration: 1800, delay: 300, distance: '0'});
         
-        $('#blog-card').hide();
-        setTimeout("$('#blog-card').fadeIn('1800')", 500);
+        $('#blog-card, #pagination').hide();
+        setTimeout("$('#blog-card, #pagination').fadeIn('1800')", 500);
     });
 
 
