@@ -152,6 +152,9 @@
       margin-top: 8px;
       text-shadow: $text-shadow;
     }
+    .feedback-letter-h6{
+      color: #fff;
+    }
 
   }
 
@@ -269,6 +272,10 @@
         margin-left: -24px;
         -webkit-transform: translateZ(0);
         -webkit-backface-visibility: hidden;
+
+        .feedback-letter-h6{
+          color: #fff;
+        }
       }
       .timeline-content {
         /*timeline content in min width 768*/
@@ -284,7 +291,7 @@
           margin-top: 33px;
         }
         .pPaddingTop{
-          margin-top: 40px;
+          padding-top: 20px;
         } 
       }
       &:nth-child(even) .timeline-content {

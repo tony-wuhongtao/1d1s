@@ -32,12 +32,20 @@
 						<div class="blog {% if loop.index is divisibleby(2) %}even {% else %}odd{% endif %}">
 	                        <!--IMAGE-->
 	                        <div class="image">
+	                        	<p class="calendar">19 <em>2017年5月</em></p>
 	                            <img alt="blog-image" src="{{ item_img.cropZoom(800,500).url }}"/>
 	                            <div class="image-overlay">
+	                            	<div class="col-md-12 image-overlay-title">
+									  <figure class="port-effect-up">
+									        <figcaption>
+									        	<h4>{{ item_title }}</h4>
+									        </figcaption>
+									  </figure>
+									</div>
 	                                <div class="comments">
 	                                    <i class="fa fa-user"></i> For
 	                                    <i class="fa fa-clock-o"></i>
-	                                    <time datetime="2045-08-16">August 7, 2020</time>
+	                                    <time datetime="2045-08-16">2017年5月19日</time>
 	                                    <i class="fa fa-comments"></i> 168
 	                                </div>
 	                            </div>
@@ -45,9 +53,9 @@
 	                        <!--DETAILS-->
 	                        <div class="content">
 	                            <ol class="breadcrumb">
-	                                <li><a href="#">Frontend</a></li>
-	                                <li><a href="#">Design</a></li>
-	                                <li class="active">Material</li>
+	                                <!-- <li><a href="#">Frontend</a></li>
+	                                <li><a href="#">Design</a></li> -->
+	                                <li class="active">2017年5月19日</li>
 	                            </ol>
 	                            <h6>{{ item_title }}</h6>
 	                            
