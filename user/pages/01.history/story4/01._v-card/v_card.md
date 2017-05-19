@@ -2,6 +2,7 @@
 title: v-card
 v_card_title: 自太空的信号
 v_card_sub_title: 'The Mysterious Signal'
+date: '2017-05-18'
 v_card_vid: 51ed3b4e3806b746275ea9335c289037_5
 social_medias:
     -

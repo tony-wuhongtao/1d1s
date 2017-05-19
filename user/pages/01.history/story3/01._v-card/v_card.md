@@ -2,6 +2,7 @@
 title: v-card
 v_card_title: 神秘山谷的故事
 v_card_sub_title: 'The Mysterious'
+date: '2017-05-17'
 v_card_vid: 51ed3b4e38237ea775818a6717e4004b_5
 social_medias:
     -
