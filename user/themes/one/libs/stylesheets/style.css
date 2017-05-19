@@ -773,7 +773,8 @@ body.scale-effect {
           line-height: 20px;
           color: #fff; }
           #v-card-holder #v-card .infos .profile-list .content p {
-            text-align: left; }
+            text-align: left;
+            min-height: 140px; }
     #v-card-holder #v-card .links {
       /*social links*/
       max-width: 500px;
@@ -794,19 +795,22 @@ body.scale-effect {
           /*making links responsive*/
           margin: 4px; }
         #v-card-holder #v-card .links #v-card-holder #v-card .infos .profile-list .content p {
-          text-align: center; } }
+          text-align: center;
+          min-height: 140px; } }
       @media screen and (max-width: 295px) {
         #v-card-holder #v-card .links .social {
           /*making links responsive*/
           margin: 1px; }
         #v-card-holder #v-card .links #v-card-holder #v-card .infos .profile-list .content p {
-          text-align: center; } }
+          text-align: center;
+          min-height: 140px; } }
     @media screen and (max-width: 990px) {
       #v-card-holder #v-card .infos {
         /*max width for infos*/
         max-width: 278px; }
         #v-card-holder #v-card .infos .profile-list .content p {
-          text-align: left; }
+          text-align: left;
+          min-height: 140px; }
       #v-card-holder #v-card .links {
         /*max width for links*/
         max-width: 325px; }
@@ -889,7 +893,8 @@ body.scale-effect {
     max-width: 100%;
     padding: 0; }
     #v-card-holder #v-card .infos .profile-list .content p {
-      text-align: center; }
+      text-align: center;
+      min-height: 140px; }
   #v-card-holder #v-card .links {
     /*links at max width 767*/
     display: table;
@@ -982,7 +987,8 @@ body.scale-effect {
     margin-bottom: 0; }
   .timeline-block .card-content {
     /*content*/
-    padding: 20px; }
+    padding: 20px;
+    min-height: 130px; }
     .timeline-block .card-content p {
       /*paragraph*/
       margin-top: 13px;
@@ -1086,17 +1092,16 @@ body.scale-effect {
           /*time*/
           color: inherit; }
     .timeline-block .timeline-content .author-portfolio {
-      width: 100%;
-      max-width: 50px;
+      width: 50%;
+      max-width: 300px;
       height: auto;
-      border-radius: 50%;
       margin-top: 15px; }
     .timeline-block .timeline-content .noPaddingLeft {
       padding-left: 0 !important; }
     .timeline-block .timeline-content .noPaddingRight {
       padding-right: 0 !important; }
     .timeline-block .timeline-content .pPaddingTop {
-      margin-top: 40px; }
+      padding-top: 55px; }
   @media screen and (max-width: 768px) {
     .timeline-block .timeline-content:before {
       /*horizontal line hide at screen size*/
@@ -1122,7 +1127,7 @@ body.scale-effect {
 
   #timeline-education .timeline-block {
     /*timeline block in min width 768*/
-    margin: -5em 0; }
+    margin: -4em 0; }
     #timeline-education .timeline-block .card {
       margin: 0; }
     #timeline-education .timeline-block:last-of-type {
@@ -1147,7 +1152,7 @@ body.scale-effect {
         max-width: 100%; }
       #timeline-education .timeline-block .timeline-content .author-portfolio {
         width: 100%;
-        max-width: 60px;
+        max-width: 80px;
         height: auto;
         margin-top: 33px; }
       #timeline-education .timeline-block .timeline-content .pPaddingTop {

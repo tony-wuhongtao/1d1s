@@ -58,6 +58,7 @@
   .card-content {
     /*content*/
     padding: 20px;
+    min-height: 130px;
     p {
       /*paragraph*/
       margin-top: 13px;
@@ -198,10 +199,10 @@
       }
     }
     .author-portfolio{
-      width: 100%;
-      max-width: 50px;
+      width: 50%;
+      max-width: 300px;
       height: auto;
-      border-radius: 50%;
+      // border-radius: 50%;
       margin-top: 15px;
     }
     .noPaddingLeft{
@@ -211,7 +212,7 @@
       padding-right: 0 !important;
     }
     .pPaddingTop{
-      margin-top: 40px;
+      padding-top: 55px;
     } 
   }
   @include phone_768 {
@@ -247,7 +248,7 @@
 
     .timeline-block {
       /*timeline block in min width 768*/
-      margin: -5em 0;
+      margin: -4em 0;
       .card {
         margin: 0;
       }
@@ -278,7 +279,7 @@
         }
         .author-portfolio{
           width: 100%;
-          max-width: 60px;
+          max-width: 80px;
           height: auto;
           margin-top: 33px;
         }
