@@ -49,5 +49,45 @@ feedbacks:
         use_default_icon: '0'
         use_custom_icon: '1'
         custom_icon: binoculars
+    -
+        title: CNN再次报道
+        sub_title: 深度关注中国一带一路
+        content: "Every field accepts a list of attributes you can use. Each field could share these common attributes, but particular fields might ignore them.\r\nEvery field accepts a list of attributes you can use. Each field could share these common attributes, but particular fields might ignore them."
+        style: s1
+        use_default_icon: '1'
+        use_custom_icon: '0'
+        big_image:
+            user/pages/01.history/story5/03._feedback/demo2.jpg:
+                name: demo2.jpg
+                type: image/jpeg
+                size: 26568
+                path: user/pages/01.history/story5/03._feedback/demo2.jpg
+    -
+        title: 再次报道
+        sub_title: 宇宙媒体深入采访
+        content: 'Every field accepts a list of attributes you can use. Each field could share these common attributes, but particular fields might ignore them.Every field accepts a list of attributes you can use. Each field could share these common attributes, but particular fields might ignore them.Every field accepts a list of attributes you can use. Each field could share these common attributes, but particular fields might ignore them.'
+        style: s2
+        use_default_icon: '1'
+        use_custom_icon: '0'
+        small_image:
+            user/pages/01.history/story5/03._feedback/demo2.jpg:
+                name: demo2.jpg
+                type: image/jpeg
+                size: 26568
+                path: user/pages/01.history/story5/03._feedback/demo2.jpg
+    -
+        comment_title: 钢铁侠
+        comment_sub_title: 来自复仇者联盟
+        comment_content: ' 我觉得这个故事很有意思！'
+        style: s3
+        use_default_icon: '0'
+        use_custom_icon: '0'
+        letter: T
+        comment_photo:
+            user/pages/01.history/story5/03._feedback/tony.jpg:
+                name: tony.jpg
+                type: image/jpeg
+                size: 39179
+                path: user/pages/01.history/story5/03._feedback/tony.jpg
 ---
 
