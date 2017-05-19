@@ -47,7 +47,7 @@ form:
                 .comment_sub_title:
                   type: text
                   label: Comment sub title
-                .coment_content:
+                .comment_content:
                   type: textarea
                   label: Comment content
                 .comment_photo:

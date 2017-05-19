@@ -31,7 +31,7 @@ feedbacks:
     -
         comment_title: 'Janusz Szewczak'
         comment_sub_title: 38，英国，伦敦
-        coment_content: 老龄化社会在现今世界各地都是常见问题。关于老年人的每项举措都是有价值的，特别是因为他们是家庭生活的核心。
+        comment_content: 老龄化社会在现今世界各地都是常见问题。关于老年人的每项举措都是有价值的，特别是因为他们是家庭生活的核心。
         style: s3
         use_default_icon: '0'
         use_custom_icon: '0'
@@ -44,7 +44,7 @@ feedbacks:
                 path: user/pages/01.history/story5/03._feedback/default_photo.jpg
     -
         comment_title: '网友 NONA'
-        coment_content: 老龄化社会在现今世界各地都是常见问题。关于老年人的每项举措都是有价值的，特别是因为他们是家庭生活的核心。
+        comment_content: 老龄化社会在现今世界各地都是常见问题。关于老年人的每项举措都是有价值的，特别是因为他们是家庭生活的核心。
         style: s4
         use_default_icon: '0'
         use_custom_icon: '1'

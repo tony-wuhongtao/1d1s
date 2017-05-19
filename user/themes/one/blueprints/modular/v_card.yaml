@@ -5,25 +5,25 @@ form:
   fields:
     tabs:
       fields:
-        social_medias:
-          type: tab
-          title: Social Medias
-          fields:
-            header.social_medias:
-              name: social_medias
-              type: list
-              label: Social Medias
+        # social_medias:
+        #   type: tab
+        #   title: Social Medias
+        #   fields:
+        #     header.social_medias:
+        #       name: social_medias
+        #       type: list
+        #       label: Social Medias
 
-              fields:
-                .icon:
-                  type: text
-                  label: Icon
-                .text:
-                  type: text
-                  label: URL
-                .css_class:
-                  type: text
-                  label: CSS Class
+        #       fields:
+        #         .icon:
+        #           type: text
+        #           label: Icon
+        #         .text:
+        #           type: text
+        #           label: URL
+        #         .css_class:
+        #           type: text
+        #           label: CSS Class
         content:
           fields:
             header.v_card_title:
