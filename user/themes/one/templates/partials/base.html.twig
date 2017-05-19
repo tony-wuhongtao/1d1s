@@ -40,9 +40,9 @@
         <!-- BOOTSTRAP -->
         {% do assets.addCss('theme://libs/stylesheets/vendors/bootstrap.min.css',92) %}
         <!-- CUSTOM STYLE IN THEME -->
-        {% set color = random(['_blue', '_blue_blend', '_brown', '_dark_dark', '_dark_gary', '_gary', '_green', '_green_blend', '_pink', '_purple', '_red', '_teal']) %}
+        {# {% set color = random(['_blue', '_blue_blend', '_brown', '_dark_dark', '_dark_gary', '_gary', '_green', '_green_blend', '_pink', '_purple', '_red', '_teal']) %} #}
         {% do assets.addCss('theme://libs/stylesheets/style.css',91) %}
-        {% do assets.addCss('theme://libs/stylesheets/style'~ color ~'.css',91) %}
+        {# {% do assets.addCss('theme://libs/stylesheets/style'~ color ~'.css',91) %} #}
         <!-- CUSTOM STYLE IN GRAV-->
         {% do assets.addCss('theme://css/custom.css',90) %}
 
