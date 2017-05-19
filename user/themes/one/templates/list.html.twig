@@ -57,16 +57,20 @@
 	                            <a class="forward" href="{{item.url}}">Read More</a>
 	                        </div>
                     	</div>
-						{% if config.plugins.pagination.enabled and collection.params.pagination %}
-		                    {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
-		                {% endif %}
-
+						
 					{% endfor %}
 
                 </div>
             </div>
         </div>
     </div>
+</section>
+<section id="pagination" class="section">
+    <div class="container" style="text-align: center">
+{% if config.plugins.pagination.enabled and collection.params.pagination %}
+	{% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+{% endif %}
+	</div>
 </section>
 
 {% endblock %}
