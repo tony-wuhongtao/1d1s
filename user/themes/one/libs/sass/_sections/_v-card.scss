@@ -69,11 +69,15 @@
         .content {
           /*infos content*/
           display: block;
-          margin-left: 30px;
+          // margin-left: 30px;
           font-size: 15px;
           font-weight: 400;
           line-height: 20px;
           color: $text-icon-color;
+          p{
+            text-align: left;
+          }
+
         }
       }
     }
@@ -100,11 +104,37 @@
           /*making links responsive*/
           margin: 4px;
         }
+        #v-card-holder{
+          #v-card{
+            .infos{
+              .profile-list{
+                .content{
+                  p{
+                    text-align: center;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
       @include screen_271 {
         .social {
           /*making links responsive*/
           margin: 1px;
+        }
+        #v-card-holder{
+          #v-card{
+            .infos{
+              .profile-list{
+                .content{
+                  p{
+                    text-align: center;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -113,6 +143,14 @@
       .infos {
         /*max width for infos*/
         max-width: 278px;
+
+        .profile-list{
+          .content{
+            p{
+              text-align: left;
+            }
+          }
+        }
       }
       .links {
         /*max width for links*/
@@ -218,6 +256,14 @@
       margin: 0 auto;
       max-width: 100%;
       padding: 0;
+
+      .profile-list{
+        .content{
+          p{
+            text-align: center;
+          }
+        }
+      }
     }
 
     .links {

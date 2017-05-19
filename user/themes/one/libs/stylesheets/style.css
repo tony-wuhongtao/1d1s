@@ -768,11 +768,12 @@ body.scale-effect {
         #v-card-holder #v-card .infos .profile-list .content {
           /*infos content*/
           display: block;
-          margin-left: 30px;
           font-size: 15px;
           font-weight: 400;
           line-height: 20px;
           color: #fff; }
+          #v-card-holder #v-card .infos .profile-list .content p {
+            text-align: left; }
     #v-card-holder #v-card .links {
       /*social links*/
       max-width: 500px;
@@ -791,15 +792,21 @@ body.scale-effect {
       @media screen and (max-width: 400px) {
         #v-card-holder #v-card .links .social {
           /*making links responsive*/
-          margin: 4px; } }
+          margin: 4px; }
+        #v-card-holder #v-card .links #v-card-holder #v-card .infos .profile-list .content p {
+          text-align: center; } }
       @media screen and (max-width: 295px) {
         #v-card-holder #v-card .links .social {
           /*making links responsive*/
-          margin: 1px; } }
+          margin: 1px; }
+        #v-card-holder #v-card .links #v-card-holder #v-card .infos .profile-list .content p {
+          text-align: center; } }
     @media screen and (max-width: 990px) {
       #v-card-holder #v-card .infos {
         /*max width for infos*/
         max-width: 278px; }
+        #v-card-holder #v-card .infos .profile-list .content p {
+          text-align: left; }
       #v-card-holder #v-card .links {
         /*max width for links*/
         max-width: 325px; }
@@ -881,6 +888,8 @@ body.scale-effect {
     margin: 0 auto;
     max-width: 100%;
     padding: 0; }
+    #v-card-holder #v-card .infos .profile-list .content p {
+      text-align: center; }
   #v-card-holder #v-card .links {
     /*links at max width 767*/
     display: table;
