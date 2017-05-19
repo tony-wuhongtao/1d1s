@@ -47,17 +47,36 @@
                         <!-- CONTACT INFO -->
                         <div class="infos">
                             <div class="profile-list">
-                                <span class="content left">{{ content }}</span>
+                                <span class="content left">{{ content|truncate(200) }}</span>
                             </div>
                         </div>
 
                         <!--LINKS-->
-                        <div class="links">
+{#                         <div class="links">
                             {% for social in page.header.social_medias %}
                             <a href="{{social.url}}"
                                class="social btn-floating {{social.css_class}}"><i
                                     class="fa fa-{{social.icon}}"></i></a>
                             {% endfor %}                     
+                        </div> #}
+                        <!--LINKS-->
+                        <div class="links">
+                            <!-- FACEBOOK-->
+                            <a href="#" id="first_one"
+                               class="social btn-floating indigo"><i
+                                    class="fa fa-facebook"></i></a>
+                            <!-- TWITTER-->
+                            <a href="#" class="social  btn-floating blue"><i
+                                    class="fa fa-twitter"></i></a>
+                            <!-- GOOGLE+-->
+                            <a href="#" class="social  btn-floating red"><i
+                                    class="fa fa-google-plus"></i></a>
+                            <!-- LINKEDIN-->
+                            <a href="#" class="social  btn-floating blue darken-3"><i
+                                    class="fa fa-linkedin"></i></a>
+                            <!-- RSS-->
+                            <a href="#" class="social  btn-floating orange darken-3"><i
+                                    class="fa fa-rss"></i></a>
                         </div>
                     </div>
                     <div id="vid" style="display:none">{{header.v_card_vid}}</div>

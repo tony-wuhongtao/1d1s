@@ -1,6 +1,6 @@
 ---
 title: about
-published: false
+published: true
 buttons:
     -
         text: 文档下载
