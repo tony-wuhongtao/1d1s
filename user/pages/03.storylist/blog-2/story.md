@@ -54,7 +54,7 @@ feedbacks:
         comment_title: 'Phil Bush'
         comment_sub_title: Conrinthian（创立于1882年英国男装品牌）策划总监
         comment_content: 我非常关注派克兰帝的视频，很震撼，非常感人，主要是因为本次时装周对于企业公益行为的关注。中国品牌像派克兰帝这样的公益故事，不仅告诉世界的企业如何找到慈善和商业的平衡点，同时也证明了企业应该关注社会公益
-        style: s1
+        style: s4
         use_default_icon: '0'
         use_custom_icon: '0'
         letter: P
