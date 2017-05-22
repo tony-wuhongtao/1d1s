@@ -1,0 +1,480 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+<!--==========================================
+                   V-CARD
+===========================================-->
+<div id="v-card-holder" class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+
+                <!-- V-CARD -->
+                <div id="v-card" class="card">
+
+                    <!-- PROFILE PICTURE -->
+                    <div id="profile" class="right">
+                        {% set image = page.media.images|first %}
+                        {% if image %}                            
+                            <img alt="profile-image" class="img-responsive" src="{{ image.cropZoom(400,400).url }}">
+                        {% else %}
+                            <img alt="profile-image" class="img-responsive" src="{{theme_url}}/libs/images/profile/profile.png">
+                        {% endif %}
+
+                        
+                        <div class="slant"></div>
+
+                        <!--EMPTY PLUS BUTTON-->
+                        <!--<div class="btn-floating btn-large add-btn"><i class="material-icons">add</i></div>-->
+
+                        <!--VIDEO PLAY BUTTON-->
+                        <div id="button-holder" class="btn-holder">
+                            <div id="play-btn" class="btn-floating btn-large btn-play">
+                                <i id="icon-play" class="material-icons">play_arrow</i>
+                            </div>
+                        </div>
+                        <div class="calendar-holder">
+                            <p class="calendar">{{ header.date|date('d') }}<em>{{ header.date|date('Y年m月') }}</em></p>
+                        </div>
+                    </div>
+                    <!--VIDEO CLOSE BUTTON-->
+                    <div id="close-btn" class="btn-floating icon-close">
+                        <i class="fa fa-close"></i>
+                    </div>
+
+                    <div class="card-content">
+
+                        <!-- NAME & STATUS -->
+                        <div class="info-headings">
+                            <h4 class="text-uppercase left">{{ page.title }}</h4>
+                            <h6 class="text-capitalize left">{{ header.v_card_sub_title }}</h6>
+                        </div>
+
+                        <!-- CONTACT INFO -->
+                        <div class="infos">
+                            <div class="profile-list">
+                                <span class="content left">{{ content|truncate(200) }}</span>
+                            </div>
+                        </div>
+
+                        <!--LINKS-->
+{#                         <div class="links">
+                            {% for social in page.header.social_medias %}
+                            <a href="{{social.url}}"
+                               class="social btn-floating {{social.css_class}}"><i
+                                    class="fa fa-{{social.icon}}"></i></a>
+                            {% endfor %}                     
+                        </div> #}
+                        <!--LINKS-->
+                        <div class="links">
+                            <!-- FACEBOOK-->
+                            <a href="#" id="first_one"
+                               class="social btn-floating indigo"><i
+                                    class="fa fa-facebook"></i></a>
+                            <!-- TWITTER-->
+                            <a href="#" class="social  btn-floating blue"><i
+                                    class="fa fa-twitter"></i></a>
+                            <!-- GOOGLE+-->
+                            <a href="#" class="social  btn-floating red"><i
+                                    class="fa fa-google-plus"></i></a>
+                            <!-- LINKEDIN-->
+                            <a href="#" class="social  btn-floating blue darken-3"><i
+                                    class="fa fa-linkedin"></i></a>
+                            <!-- RSS-->
+                            <a href="#" class="social  btn-floating orange darken-3"><i
+                                    class="fa fa-rss"></i></a>
+                        </div>
+                    </div>
+                    <div id="vid" style="display:none">{{header.v_card_vid}}</div>
+                    
+                    <div id='html-video' style="position: absolute;z-index: 2"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--==========================================
+                   ABOUT
+===========================================-->
+<div id="about" class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- DETAILS -->
+                <div id="about-card" class="card">
+                    <div class="card-content">
+                        <!-- ABOUT PARAGRAPH -->
+                        {{ content }}
+                    </div>
+
+                    <!-- BUTTONS -->
+                    <div id="about-btn" class="card-action">
+                        <div class="about-btn">
+
+                            <!-- DOWNLOAD CV BUTTON -->
+                            <a href="#" class="btn waves-effect">下载传播效果报告</a>
+                            <a href="#" data-toggle="modal" data-target="#advModal" class="btn waves-effect">我有好故事</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--==========================================
+                   FEEDBACK
+===========================================-->
+<section id="feedback" class="section">
+    <div class="container">
+        <!-- SECTION TITLE -->
+        <div class="section-title">
+            <h4 class="text-uppercase text-center"><img src="{{ theme_url }}/libs/images/icons/bubbles-alt.png" alt="demo">播出反馈</h4>
+        </div>
+
+        <div id="timeline-education">
+            <!-- Feadback Items -->
+            {% for item in header.feedbacks %}
+                {% set style = item.style %}
+
+                {% if style == 's1' %}
+                <!-- Report with big image -->
+                <!-- BIG IMAGE REPORT-->
+                <div class="timeline-block">
+                    <!-- DOT -->
+                    <div class="timeline-dot">
+                    {% if item.use_default_icon == 0 %}
+                         
+                        {% if item.use_custom_icon == 1 and item.custom_icon %}    
+                            <i class="fa fa-{{ item.custom_icon }}"></i> 
+                        {% elseif item.letter %}
+                            <h6 class="feedback-letter-h6">{{ item.letter }}</h6>
+                        {% endif %}
+                    {% else %}
+                        <i class="fa fa-commenting"></i>
+                    {% endif %}
+                    </div>
+
+                    <!-- TIMELINE CONTENT -->
+                    <div class="card timeline-content">
+                        <div class="card-content">
+                            <!-- TIMELINE TITLE -->
+                            <h6 class="timeline-title"><a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-{{ loop.index }}">{{ item.title }}</a></h6>
+                            <!-- TIMELINE TITLE INFO -->
+                            <div class="timeline-info">
+                                <h6>
+                                    <small>{{ item.sub_title }}</small>
+                                </h6>
+                            </div>
+                            {% set big_img = item.big_image|first %}
+                            {{ dump(page.media.images) }}
+                            <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-{{ loop.index }}"><img class="feedback-image"  src="{{ site_url}}/{{ big_img.path }}"></a>
+                            <div class="clearfix"></div>
+                            
+                        </div>
+                    </div>
+                </div>  
+
+                {% endif %}
+
+                {% if style == 's2' %}
+                <!-- Report with small image -->
+                <!-- SMALL IMAGE REPORT -->
+                <div class="timeline-block">
+                    <!-- DOT -->
+                    <div class="timeline-dot">
+                    {% if item.use_default_icon == 0 %}
+                         
+                        {% if item.use_custom_icon == 1 and item.custom_icon %}    
+                            <i class="fa fa-{{ item.custom_icon }}"></i> 
+                        {% elseif item.letter %}
+                            <h6 class="feedback-letter-h6">{{ item.letter }}</h6>
+                        {% endif %}
+                    {% else %}
+                        <i class="fa fa-commenting"></i>
+                    {% endif %}
+                    </div>
+                    <!-- TIMELINE CONTENT -->
+                    <div class="card timeline-content">
+                        <div class="card-content">
+                            <div class="col-md-7 noPaddingLeft">
+                                <!-- TIMELINE TITLE -->
+                                <h6 class="timeline-title"><a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-{{ loop.index }}">{{ item.title }}</a></h6>
+                                <!-- TIMELINE TITLE INFO -->
+                                <div class="timeline-info">
+                                    <h6>
+                                        <small>{{ item.sub_title }}</small>
+                                    </h6>
+                                    <!-- <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-{{ loop.index }}">
+                                        <i class="fa fa-picture-o" aria-hidden="true"></i>
+                                    </a> -->
+                                </div>
+                                <!-- TIMELINE PARAGRAPH -->
+                                <!-- <p>
+                                报道的具体内容
+                                </p> -->
+                            </div>
+                            <div class="col-md-5 noPaddingLeft">
+                                {% set small_img = item.small_image|first %}
+                                <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-{{ loop.index }}"><img class="feedback-image"  src="{{ site_url}}/{{ small_img.path }}"></a>
+                            </div>
+                            <div class="clearfix"></div>
+                            
+                        </div>
+                    </div>
+                </div>    
+
+                {% endif %}
+                
+                {% if style == 's3' %}
+                        <!-- Comment with photo -->
+                <!-- COMMENT WITH PHOTO -->
+                    <div class="timeline-block">
+                        <!-- DOT -->
+                        <div class="timeline-dot">
+                        {% if item.use_default_icon == 0 %}
+                             
+                            {% if item.use_custom_icon == 1 and item.custom_icon %}    
+                                <i class="fa fa-{{ item.custom_icon }}"></i> 
+                            {% elseif item.letter %}
+                                <h6 class="feedback-letter-h6">{{ item.letter }}</h6>
+                            {% endif %}
+                        {% else %}
+                            <i class="fa fa-commenting"></i>
+                        {% endif %}
+                        </div>
+                        <!-- TIMELINE CONTENT -->
+                        <div class="card timeline-content">
+                            <div class="col-md-3 noPaddingRight">
+                                {% set photo = item.comment_photo|first %}
+                                <img class="author-portfolio" src="{{ photo.path }}">
+                                
+                            </div>
+                            <div class="col-md-9 noPaddingLeft">
+                                <div class="card-content">
+                                    {{ item.comment_content }}
+                                    <div class="timeline-info author-info">
+                                        <h6 class="author-name">
+                                            <small>{{ item.comment_title }}</small>
+                                        </h6>
+                                        <h6>
+                                            <small><span>{{ item.comment_sub_title }}</span></small>
+                                        </h6>
+                                    </div>
+                                    <!-- TIMELINE TITLE -->
+                                    <!-- <h6 class="timeline-title">High School</h6> -->
+                                    <!-- TIMELINE PARAGRAPH -->
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+
+                {% endif %}
+                {% if style == 's4' %}
+                        <!-- Just Comment -->
+                    <!-- JUST COMMENT -->
+                    <div class="timeline-block">
+                        <!-- DOT -->
+                        <div class="timeline-dot">
+                        {% if item.use_default_icon == 0 %}
+                             
+                            {% if item.use_custom_icon == 1 and item.custom_icon %}    
+                                <i class="fa fa-{{ item.custom_icon }}"></i> 
+                            {% elseif item.letter %}
+                                <h6 class="feedback-letter-h6">{{ item.letter }}</h6>
+                            {% endif %}
+                        {% else %}
+                            <i class="fa fa-commenting"></i>
+                        {% endif %}
+                        </div>
+                        <!-- TIMELINE CONTENT -->
+                        <div class="card timeline-content">
+                            <div class="col-md-12 noPaddingLeft">
+                                <div class="card-content pPaddingTop">
+                                    {{ item.comment_content}}
+                                    <div class="timeline-info author-info">
+                                        <h6 class="author-name">
+                                            <small>{{ item.comment_title}}</small>
+                                        </h6>
+                                        <!-- <h6>
+                                            <small><span>Jan 2000 - Mar 2005</span></small>
+                                        </h6> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endif %}
+
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!--==========================================
+                  MODALS
+===========================================-->
+<section>
+    {% for item in header.feedbacks %}
+    {% set style = item.style %}
+
+    {% if style == 's1' %}
+        <!-- Report with big image -->
+        <!-- BIG IMAGE REPORT-->
+        <div class="modal fade" id="myModal-{{ loop.index }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-{{ loop.index }}">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <!--MODAL HEADER-->
+                    <div class="modal-header  text-center">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true"><i class="fa fa-close"></i></span></button>
+                        <h4 class="modal-title" id="myModal-{{ loop.index }}">{{ item.title }}</h4>
+                        <h6 class="noPadding">
+                            <small>{{ item.sub_title }}</small>
+                        </h6>
+                    </div>
+                    <!--MODAL BODY-->
+                    <div class="modal-body">
+                        {% set big_img = item.big_image|first %}
+                        <img src="{{ site_url}}/{{ big_img.path }}" alt="{{ item.title }}"></img>
+                        {{ item.content }}
+                    </div>
+                    <!--MODAL FOOTER-->
+                    <div class="modal-footer">
+                        <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {% endif %}
+
+    {% if style == 's2' %}
+        <!-- Report with small image -->
+        <!-- SMALL IMAGE REPORT -->
+        <div class="modal fade" id="myModal-{{ loop.index }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-{{ loop.index }}">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header  text-center">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true"><i class="fa fa-close"></i></span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-md-7">
+                            <h4 class="modal-title" id="myModalLabel-{{ loop.index }}">{{ item.title }}</h4>
+                            <h6>
+                                <small>{{ item.sub_title }}</small>
+                            </h6>
+                            {{ item.content }}
+                        </div>
+                        <div class="col-md-5">
+                            {% set small_img = item.small_image|first %}
+                                <img src="{{ site_url}}/{{ small_img.path }}" alt="{{ item.title }}"></img>
+                        </div>
+                    </div>
+                    <!--MODAL FOOTER-->
+                    <div class="modal-footer">
+                        <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+
+        {% endif %}
+        
+        {% if style == 's3' %}
+                <!-- Comment with photo -->
+        <!-- COMMENT WITH PHOTO -->
+
+
+        {% endif %}
+
+    {% endfor %}
+</section>
+
+<!--ADV MODAL-->
+<div class="modal fade" id="advModal" tabindex="-1" role="dialog" aria-labelledby="advModalLabel-1">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <!--MODAL HEADER-->
+            <div class="modal-header  text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true"><i class="fa fa-close"></i></span></button>
+                <div class="col-md-3"></div>
+                <div class="col-md-6"><h4 class="modal-title" id="advModalLabel-1" style="margin-top: 15px;">谁是今日千万亿?</h4></div>
+                <div class="col-md-3"></div>
+                <!-- <h6>
+                    <small>Jan 2014 - Mar 2015</small>
+                </h6> -->
+            </div>
+            <!--MODAL BODY-->
+            <div class="modal-body">
+                <!-- <img class="img-responsive" alt="graduation" src="images/timeline/demo-gra.jpg"> -->
+                <p style="text-align:center;">
+                    “千万亿平台”专注于中国故事的全球传播，以创新的融媒体平台模式，以规模化之路向全球传播中国文化。
+                </p>
+                <div class="col-md-1"></div>
+                <div class="col-md-3" style="text-align:right;"><img class="img-responsive" style="margin: 0 auto;" alt="graduation" src="{{ theme_url }}/libs/images/custom/bottom-logo.png"></div>
+                <div class="col-md-8">
+                    <ul style="list-style: none;text-align: left;">
+                        <li>地 址：北京市朝阳区东八里庄1号莱锦创意产业园CN16蓝海电视大楼</li>
+                        <li>电 话：010-5227 0866</li>
+                        <li>传 真：010-5227 0999</li>
+                        <li>邮 箱：sales@bon-cloud.com</li>
+                    </ul>
+                </div>
+
+            </div>
+            <!--MODAL FOOTER-->
+            <div class="modal-footer">
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+<a id="modal-btn" href="#" class="modal-dot" data-toggle="modal" data-target="#advModal">
+    <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+</a>
+
+<script src='//player.polyv.net/script/polyvplayer.min.js'></script>
+{% do assets.addInlineJs("var vcardWidth = $('#v-card').width();
+    var videoHeight = vcardWidth/16*9;
+    var vid = $('#vid').text();
+    var player = polyvObject('#html-video').videoPlayer({
+        'width' : vcardWidth,
+        'height' : videoHeight,
+        'vid' : vid
+    });
+
+    function resume()
+    {
+      player.j2s_resumeVideo();
+    }
+      
+    function pause()
+    {
+      player.j2s_pauseVideo();
+    }", 99) %}
+
+{% do assets.addInlineJs("
+    $(window).on('scroll',function() {
+        if ($(window).scrollTop() > $('#feedback').position().top) {
+            $('#modal-btn').click();
+            $(window).off('scroll');
+        }
+    });
+    ", 88) %}
+
+{% do assets.addInlineJs("
+    var timeline_div_height = $('#timeline-education').height();
+    var last_div_top = $('#timeline-education .timeline-block:last-child').height();
+    
+    var line_height = timeline_div_height - last_div_top;
+
+    $('#timeline-education').append('<style>#timeline-education::before{height: '+line_height+'px}</style>')
+    ", 86) %}
+{% endblock %}
