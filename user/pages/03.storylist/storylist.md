@@ -1,5 +1,5 @@
 ---
-title: Archieve
+title: StoryList
 content:
     items: '@self.children'
     limit: 4
