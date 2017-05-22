@@ -2,7 +2,8 @@
 title: v-card
 v_card_title: 神秘森林
 v_card_sub_title: 'The Mysterious Forest'
-date: '2017-05-19'
+v_card_description: 'The large number of murals preserved in the **Potala Palace** reproduces the history of the Tibetan people''s social life in various fields. They are important cultural heritage of the Chinese nation and human history. In order to preserve the murals of Potala Palace forever, with the support of the Palace, the collection team of Yachang Culture Group Chinese Art Data Center has worked relentlessly for four years and completed the data collection job for the murals systematically and thoroughly. This is the first time this job has done for **Potala Palace**.'
+date: '19-05-2017 00:00'
 v_card_vid: 51ed3b4e38e17e030e0757343fd3f10a_5
 social_medias:
     -
@@ -44,4 +45,4 @@ social-medias:
         css_class: 'blue darken-3'
 ---
 
-The large number of murals preserved in the **Potala Palace** reproduces the history of the Tibetan people's social life in various fields. They are important cultural heritage of the Chinese nation and human history. In order to preserve the murals of Potala Palace forever, with the support of the Palace, the collection team of Yachang Culture Group Chinese Art Data Center has worked relentlessly for four years and completed the data collection job for the murals systematically and thoroughly. This is the first time this job has done for **Potala Palace**.
+nothing

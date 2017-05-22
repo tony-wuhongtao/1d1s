@@ -25,10 +25,10 @@
                     			{% set item_title = md.header.v_card_title %}
                     			{% set item_img = md.media.images|first %}
                     			{% set item_date = md.header.date %}
-                    			{% set item_content = md.content %}
+                    			{% set item_content = md.header.v_card_description %}
                     			{% set for_break = true %}
                     		{% endif %}
-							{{ dump(item_content) }}
+
                     	{% endfor %}
                     	{% set for_break = false %}
 
@@ -61,9 +61,10 @@
 	                                <li class="active">{{ item_date|date('Y年m月d日') }}</li>
 	                            </ol>
 	                            <h6>{{ item_title }}</h6>
-	                            <p>
-	                                {# {{ item_content |truncate(200, true)}} #}
-	                            </p>
+	                            <div>
+	                            	{{ item_content|truncate(200, true) }}
+	                            </div>
+                                
 	                            <a class="forward" href="{{item.url}}">Read More</a>
 	                        </div>
                     	</div>
