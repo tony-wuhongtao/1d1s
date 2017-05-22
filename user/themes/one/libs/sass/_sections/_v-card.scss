@@ -200,6 +200,11 @@
           color: $white;
         }
       }
+      .calendar-holder{
+        position: absolute;
+        top: 0px;
+        right: 20px;
+      }
     }
 
   }
@@ -243,7 +248,10 @@
         /*hide add button*/
         display: none;
       }
-
+      .calendar-holder{
+        top: 20px;
+        right: 145px;
+      }
     }
     .social {
       /*links styles at max width 767*/
