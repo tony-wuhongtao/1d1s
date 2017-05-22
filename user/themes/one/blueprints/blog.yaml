@@ -1,0 +1,118 @@
+title: Vcard
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        vcard:
+          type: tab
+          title: V-Card
+          fields:
+            header.v_card_sub_title:
+              type: text
+              label: Sub Title  
+            header.date:
+              type: date
+              label: Date
+            header.v_card_vid:
+              type: text
+              label: VID(get from polyv)
+
+        # about:
+        #   type: tab
+        #   title: About
+        #   fields:
+
+        feedback:
+          type: tab
+          title: Feedback
+          fields:
+            header.feedbacks:
+              name: feedbacks
+              type: list
+              label: Feedback Items
+              fields:
+                .dev_1:
+                  type: section
+                  title: Feedback Item
+                  underline: true
+                .title:
+                  type: text
+                  label: Report itle
+                .sub_title:
+                  type: text
+                  label: Report sub title
+                .content:
+                  type: textarea
+                  label: Feedback content
+                .big_image:
+                  type: file
+                  label: Big Image(Only one 800x500)
+                  multiple: false
+                  destination: 'self@'
+                  accept:
+                    - image/*
+                .small_image:
+                  type: file
+                  label: Small Image(Only one 400x400)
+                  multiple: false
+                  destination: 'self@'
+                  accept:
+                    - image/*
+                .comment_title:
+                  type: text
+                  label: Comment title
+                .comment_sub_title:
+                  type: text
+                  label: Comment sub title
+                .comment_content:
+                  type: textarea
+                  label: Comment content
+                .comment_photo:
+                  type: file
+                  label: Comment photo(Only one 150x150)
+                  multiple: false
+                  destination: 'self@'
+                  accept:
+                    - image/*
+                .dev_2:
+                  type: section
+                  underline: true 
+                .style:
+                  type: select
+                  size: medium
+                  classes: fancy
+                  label: Select Style
+                  options:
+                    s1: Report with big image
+                    s2: Report with small image
+                    s3: Comment with photo
+                    s4: Just Comment
+                .use_default_icon:
+                  type: toggle
+                  highlight: 1
+                  label: Use Default Icon ?（1st priority)
+                  default: 1
+                  options:
+                    1: Yes
+                    0: No 
+                .use_custom_icon:
+                  type: toggle
+                  highlight: 1
+                  default: 0
+                  label: Use Custom Icon ?（2nd priority)
+                  options:
+                    1: Yes
+                    0: No 
+                .custom_icon:
+                  type: text
+                  label: fa icon name  (http://fontawesome.io/)
+                .letter:
+                  type: text
+                  label: Big letter( 3rd priority, Only support One letter )
+
+
+
+
+        
