@@ -18,6 +18,15 @@ form:
             header.v_card_vid:
               type: text
               label: VID(get from polyv)
+            header.v_card_img:
+                  type: filepicker
+                  folder: '@self'
+                  preview_images: true
+                  label: Select Card Image
+                  accept:
+                    - .png
+                    - .jpg
+                    - .jpeg
 
         # about:
         #   type: tab
@@ -46,20 +55,38 @@ form:
                 .content:
                   type: textarea
                   label: Feedback content
-                .big_image:
-                  type: file
-                  label: Big Image(Only one 800x500)
-                  multiple: false
-                  destination: 'self@'
+                # .big_image:
+                #   type: file
+                #   label: Big Image(Only one 800x500)
+                #   multiple: false
+                #   destination: 'self@'
+                #   accept:
+                #     - image/*
+                .big_img:
+                  type: filepicker
+                  folder: '@self'
+                  preview_images: true
+                  label: Select Big Image(Only one 800x500)
                   accept:
-                    - image/*
-                .small_image:
-                  type: file
-                  label: Small Image(Only one 400x400)
-                  multiple: false
-                  destination: 'self@'
+                    - .png
+                    - .jpg
+                    - .jpeg
+                # .small_image:
+                #   type: file
+                #   label: Small Image(Only one 400x400)
+                #   multiple: false
+                #   destination: 'self@'
+                #   accept:
+                #     - image/*
+                .small_img:
+                  type: filepicker
+                  folder: '@self'
+                  preview_images: true
+                  label: Select Small Image(Only one 400x400)
                   accept:
-                    - image/*
+                    - .png
+                    - .jpg
+                    - .jpeg
                 .comment_title:
                   type: text
                   label: Comment title
@@ -69,13 +96,22 @@ form:
                 .comment_content:
                   type: textarea
                   label: Comment content
-                .comment_photo:
-                  type: file
-                  label: Comment photo(Only one 150x150)
-                  multiple: false
-                  destination: 'self@'
+                # .comment_photo:
+                #   type: file
+                #   label: Comment photo(Only one 150x150)
+                #   multiple: false
+                #   destination: 'self@'
+                #   accept:
+                #     - image/*
+                .comment_img:
+                  type: filepicker
+                  folder: '@self'
+                  preview_images: true
+                  label: Select Comment photo(Only one 150x150)
                   accept:
-                    - image/*
+                    - .png
+                    - .jpg
+                    - .jpeg
                 .dev_2:
                   type: section
                   underline: true 

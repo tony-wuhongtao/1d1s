@@ -3,6 +3,7 @@ title: 神秘的远古故事
 date: '2017-05-16'
 v_card_sub_title: 'The Mysterious '
 v_card_vid: 51ed3b4e3816203b3d90840cb1c7002c_5
+v_card_img: Archie_ROW12904151481_1920x1080.jpg
 feedbacks:
     -
         title: CNN采用了

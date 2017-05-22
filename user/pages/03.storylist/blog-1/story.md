@@ -3,6 +3,7 @@ title: 神秘的布达拉宫
 date: '2017-05-09'
 v_card_sub_title: 'The Mysterious Potala Palace'
 v_card_vid: 51ed3b4e3806b746275ea9335c289037_5
+v_card_img: BON_Cloud_Potala-Palace-Art1.jpg
 feedbacks:
     -
         title: CNN采用了

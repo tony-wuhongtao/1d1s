@@ -3,6 +3,7 @@ title: 神秘山谷的故事
 date: '2017-05-02'
 v_card_sub_title: 'The Mysterious'
 v_card_vid: 51ed3b4e38237ea775818a6717e4004b_5
+v_card_img: DadesValley_ROW11320459164_1920x1080.jpg
 feedbacks:
     -
         title: CNN采用了
