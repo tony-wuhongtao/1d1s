@@ -845,6 +845,10 @@ body.scale-effect {
           /*icon*/
           font-size: 35px;
           color: #fff; }
+      #v-card-holder #v-card #profile .calendar-holder {
+        position: absolute;
+        top: 0px;
+        right: 20px; }
 
 @media screen and (max-width: 767px) {
   /*at max width 767*/
@@ -880,6 +884,9 @@ body.scale-effect {
       #v-card-holder #v-card #profile .add-btn {
         /*hide add button*/
         display: none; }
+      #v-card-holder #v-card #profile .calendar-holder {
+        top: 20px;
+        right: 150px; }
     #v-card-holder #v-card .social {
       /*links styles at max width 767*/
       top: 0;
