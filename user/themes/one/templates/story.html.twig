@@ -14,7 +14,7 @@
 
                     <!-- PROFILE PICTURE -->
                     <div id="profile" class="right">
-                        {% set image = page.media.images|first %}
+                        {% set image = page.media[header.v_card_img] %}
                         {% if image %}                            
                             <img alt="profile-image" class="img-responsive" src="{{ image.cropZoom(400,400).url }}">
                         {% else %}
@@ -168,9 +168,8 @@
                                     <small>{{ item.sub_title }}</small>
                                 </h6>
                             </div>
-                            {% set big_img = item.big_image|first %}
-                            {{ dump(page.media.images) }}
-                            <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-{{ loop.index }}"><img class="feedback-image"  src="{{ site_url}}/{{ big_img.path }}"></a>
+                            {% set big_img = page.media[item.big_img] %}
+                            <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-{{ loop.index }}"><img class="feedback-image"  src="{{ big_img.url }}"></a>
                             <div class="clearfix"></div>
                             
                         </div>
@@ -217,8 +216,8 @@
                                 </p> -->
                             </div>
                             <div class="col-md-5 noPaddingLeft">
-                                {% set small_img = item.small_image|first %}
-                                <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-{{ loop.index }}"><img class="feedback-image"  src="{{ site_url}}/{{ small_img.path }}"></a>
+                                {% set small_img = page.media[item.small_img] %}
+                                <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-{{ loop.index }}"><img class="feedback-image"  src="{{ small_img.url }}"></a>
                             </div>
                             <div class="clearfix"></div>
                             
@@ -248,8 +247,8 @@
                         <!-- TIMELINE CONTENT -->
                         <div class="card timeline-content">
                             <div class="col-md-3 noPaddingRight">
-                                {% set photo = item.comment_photo|first %}
-                                <img class="author-portfolio" src="{{ photo.path }}">
+                                {% set photo = page.media[item.comment_img] %}
+                                <img class="author-portfolio" src="{{ photo.url }}">
                                 
                             </div>
                             <div class="col-md-9 noPaddingLeft">
@@ -338,8 +337,8 @@
                     </div>
                     <!--MODAL BODY-->
                     <div class="modal-body">
-                        {% set big_img = item.big_image|first %}
-                        <img src="{{ site_url}}/{{ big_img.path }}" alt="{{ item.title }}"></img>
+                        {% set big_img = page.media[item.big_img] %}
+                        <img src="{{ big_img.url }}" alt="{{ item.title }}"></img>
                         {{ item.content }}
                     </div>
                     <!--MODAL FOOTER-->
@@ -371,8 +370,8 @@
                             {{ item.content }}
                         </div>
                         <div class="col-md-5">
-                            {% set small_img = item.small_image|first %}
-                                <img src="{{ site_url}}/{{ small_img.path }}" alt="{{ item.title }}"></img>
+                            {% set small_img = page.media[item.small_img] %}
+                                <img src="{{ small_img.url }}" alt="{{ item.title }}"></img>
                         </div>
                     </div>
                     <!--MODAL FOOTER-->

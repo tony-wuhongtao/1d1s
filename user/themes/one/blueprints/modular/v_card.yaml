@@ -32,6 +32,9 @@ form:
             header.v_card_sub_title:
               type: text
               label: Sub Title  
+            header.v_card_description:
+              type: textarea
+              label: Story Description  
             header.date:
               type: date
               label: Date

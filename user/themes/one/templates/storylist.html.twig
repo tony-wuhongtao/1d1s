@@ -22,7 +22,7 @@
 					{% for item in collection %}
                 		
             			{% set item_title = item.title %}
-            			{% set item_img = item.media.images|first %}
+            			{% set item_img = item.media[item.header.v_card_img] %}
             			{% set item_date = item.header.date %}
             			{% set item_content = item.content %}
 
@@ -49,14 +49,9 @@
 	                        </div>
 	                        <!--DETAILS-->
 	                        <div class="content">
-	                            <ol class="breadcrumb">
-	                                <!-- <li><a href="#">Frontend</a></li>
-	                                <li><a href="#">Design</a></li> -->
-	                                <li class="active">{{ item_date|date('Y年m月d日') }}</li>
-	                            </ol>
 	                            <h6>{{ item_title }}</h6>
 	                            <p>
-	                                {# {{ item_content |truncate(200, true)}} #}
+	                                {{ item_content |truncate(200, true)}}
 	                            </p>
 	                            <a class="forward" href="{{item.url}}">Read More</a>
 	                        </div>

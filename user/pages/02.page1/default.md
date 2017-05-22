@@ -1,5 +1,5 @@
 ---
-title: page demo1
+title: 'page demo1'
 ---
 
 # Grav is Running!
