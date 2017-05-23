@@ -4,7 +4,24 @@
 @import "../_abstracts/_variables";
 @import "../_mixins/_mediamixins";
 
-#timeline-education {
+#timeline-education-broadcast{
+  /*education section*/
+  position: relative;
+  &:before {
+    /*straight line*/
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 23px;
+    left: 50%;
+    height: 99.5%;
+    width: 4px;
+    opacity: 0.3;
+    background: $primary-color;
+  }
+}
+
+#timeline-education-comment{
   /*education section*/
   position: relative;
   &:before {
@@ -231,7 +248,15 @@
 @include screen_min_width_768 {
   /*properties for min width 768*/
 
-  #timeline-education::before {
+  #timeline-education-broadcast::before {
+    /*vertical line for education in in min width 768 */
+    left: 50%;
+    margin-left: -2px;
+    height: 77.1%;
+    opacity: 0.4;
+    background: $primary-color;
+  }
+  #timeline-education-comment::before {
     /*vertical line for education in in min width 768 */
     left: 50%;
     margin-left: -2px;
@@ -247,7 +272,70 @@
     opacity: 0.4;
     background: $primary-color;
   }
-  #timeline-education{
+  #timeline-education-broadcast{
+
+    .timeline-block {
+      /*timeline block in min width 768*/
+      margin: -4em 0;
+      .card {
+        margin: 0;
+      }
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+      &:first-of-type{
+        margin-top: 0;
+      }
+      
+      .timeline-dot {
+        /*timeline dot in min width 768*/
+        width: 50px;
+        height: 50px;
+        left: 50%;
+        top: 0;
+        z-index: 2;
+        margin-left: -24px;
+        -webkit-transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+
+        .feedback-letter-h6{
+          color: #fff;
+        }
+      }
+      .timeline-content {
+        /*timeline content in min width 768*/
+        width: 44%;
+        .timeline-title {
+          /*timeline title min width 768*/
+          max-width: 100%;
+        }
+        .author-portfolio{
+          width: 100%;
+          max-width: 80px;
+          height: auto;
+          margin-top: 33px;
+        }
+        .pPaddingTop{
+          padding-top: 20px;
+        } 
+      }
+      &:nth-child(even) .timeline-content {
+        /*content to right*/
+        float: right;
+      }
+      &:nth-child(even) .timeline-content::before {
+        /*horizontal line*/
+        top: 25px;
+        left: auto;
+        right: 101.2%;
+        z-index: -2;
+      }
+      .card-content-noPaddingTop {
+        padding-top: 20px;
+      }
+    }
+  }
+  #timeline-education-comment{
 
     .timeline-block {
       /*timeline block in min width 768*/

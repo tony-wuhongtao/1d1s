@@ -17,7 +17,13 @@
         {# <a href="{{ base_url }}/#skills"><i class="title-icon fa fa-sliders"></i>Data</a> #}
         {% endif %}
         <a href="{{ base_url }}/storylist"><i class="title-icon fa fa-calendar"></i>History</a>
+
+        <div>
+            {% include 'partials/simplesearch_searchbox.html.twig' %}
+        </div>
+
     </div>
+
 
     <!-- MENU BUTTON -->
     <div id="menuToggle">

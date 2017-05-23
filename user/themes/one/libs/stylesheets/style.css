@@ -616,6 +616,10 @@ body.scale-effect {
     height: 100%;
     overflow-y: auto;
     padding-top: 14px; }
+    #home .menu .menu-wrap .search-wrapper {
+      margin-left: 30px; }
+      #home .menu .menu-wrap .search-wrapper .search-submit {
+        display: block; }
   #home .menu .logo-flat {
     /*menu logo*/
     height: 200px;
@@ -886,7 +890,7 @@ body.scale-effect {
         display: none; }
       #v-card-holder #v-card #profile .calendar-holder {
         top: 20px;
-        right: 150px; }
+        right: 145px; }
     #v-card-holder #v-card .social {
       /*links styles at max width 767*/
       top: 0;
@@ -950,10 +954,25 @@ body.scale-effect {
 /*-------------------------------------------------------------------------------
  TIMELINE SECTION BOTH 5.EDUCATION AND 7.EXPERIENCE EXTENDS FROM IT
 -------------------------------------------------------------------------------*/
-#timeline-education {
+#timeline-education-broadcast {
   /*education section*/
   position: relative; }
-  #timeline-education:before {
+  #timeline-education-broadcast:before {
+    /*straight line*/
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 23px;
+    left: 50%;
+    height: 99.5%;
+    width: 4px;
+    opacity: 0.3;
+    background: #06A763; }
+
+#timeline-education-comment {
+  /*education section*/
+  position: relative; }
+  #timeline-education-comment:before {
     /*straight line*/
     content: '';
     position: absolute;
@@ -1118,7 +1137,15 @@ body.scale-effect {
 
 @media only screen and (min-width: 768px) {
   /*properties for min width 768*/
-  #timeline-education::before {
+  #timeline-education-broadcast::before {
+    /*vertical line for education in in min width 768 */
+    left: 50%;
+    margin-left: -2px;
+    height: 77.1%;
+    opacity: 0.4;
+    background: #06A763; }
+
+  #timeline-education-comment::before {
     /*vertical line for education in in min width 768 */
     left: 50%;
     margin-left: -2px;
@@ -1134,16 +1161,16 @@ body.scale-effect {
     opacity: 0.4;
     background: #06A763; }
 
-  #timeline-education .timeline-block {
+  #timeline-education-broadcast .timeline-block {
     /*timeline block in min width 768*/
     margin: -4em 0; }
-    #timeline-education .timeline-block .card {
+    #timeline-education-broadcast .timeline-block .card {
       margin: 0; }
-    #timeline-education .timeline-block:last-of-type {
+    #timeline-education-broadcast .timeline-block:last-of-type {
       margin-bottom: 0; }
-    #timeline-education .timeline-block:first-of-type {
+    #timeline-education-broadcast .timeline-block:first-of-type {
       margin-top: 0; }
-    #timeline-education .timeline-block .timeline-dot {
+    #timeline-education-broadcast .timeline-block .timeline-dot {
       /*timeline dot in min width 768*/
       width: 50px;
       height: 50px;
@@ -1153,31 +1180,77 @@ body.scale-effect {
       margin-left: -24px;
       -webkit-transform: translateZ(0);
       -webkit-backface-visibility: hidden; }
-      #timeline-education .timeline-block .timeline-dot .feedback-letter-h6 {
+      #timeline-education-broadcast .timeline-block .timeline-dot .feedback-letter-h6 {
         color: #fff; }
-    #timeline-education .timeline-block .timeline-content {
+    #timeline-education-broadcast .timeline-block .timeline-content {
       /*timeline content in min width 768*/
       width: 44%; }
-      #timeline-education .timeline-block .timeline-content .timeline-title {
+      #timeline-education-broadcast .timeline-block .timeline-content .timeline-title {
         /*timeline title min width 768*/
         max-width: 100%; }
-      #timeline-education .timeline-block .timeline-content .author-portfolio {
+      #timeline-education-broadcast .timeline-block .timeline-content .author-portfolio {
         width: 100%;
         max-width: 80px;
         height: auto;
         margin-top: 33px; }
-      #timeline-education .timeline-block .timeline-content .pPaddingTop {
+      #timeline-education-broadcast .timeline-block .timeline-content .pPaddingTop {
         padding-top: 20px; }
-    #timeline-education .timeline-block:nth-child(even) .timeline-content {
+    #timeline-education-broadcast .timeline-block:nth-child(even) .timeline-content {
       /*content to right*/
       float: right; }
-    #timeline-education .timeline-block:nth-child(even) .timeline-content::before {
+    #timeline-education-broadcast .timeline-block:nth-child(even) .timeline-content::before {
       /*horizontal line*/
       top: 25px;
       left: auto;
       right: 101.2%;
       z-index: -2; }
-    #timeline-education .timeline-block .card-content-noPaddingTop {
+    #timeline-education-broadcast .timeline-block .card-content-noPaddingTop {
+      padding-top: 20px; }
+
+  #timeline-education-comment .timeline-block {
+    /*timeline block in min width 768*/
+    margin: -4em 0; }
+    #timeline-education-comment .timeline-block .card {
+      margin: 0; }
+    #timeline-education-comment .timeline-block:last-of-type {
+      margin-bottom: 0; }
+    #timeline-education-comment .timeline-block:first-of-type {
+      margin-top: 0; }
+    #timeline-education-comment .timeline-block .timeline-dot {
+      /*timeline dot in min width 768*/
+      width: 50px;
+      height: 50px;
+      left: 50%;
+      top: 0;
+      z-index: 2;
+      margin-left: -24px;
+      -webkit-transform: translateZ(0);
+      -webkit-backface-visibility: hidden; }
+      #timeline-education-comment .timeline-block .timeline-dot .feedback-letter-h6 {
+        color: #fff; }
+    #timeline-education-comment .timeline-block .timeline-content {
+      /*timeline content in min width 768*/
+      width: 44%; }
+      #timeline-education-comment .timeline-block .timeline-content .timeline-title {
+        /*timeline title min width 768*/
+        max-width: 100%; }
+      #timeline-education-comment .timeline-block .timeline-content .author-portfolio {
+        width: 100%;
+        max-width: 80px;
+        height: auto;
+        margin-top: 33px; }
+      #timeline-education-comment .timeline-block .timeline-content .pPaddingTop {
+        padding-top: 20px; }
+    #timeline-education-comment .timeline-block:nth-child(even) .timeline-content {
+      /*content to right*/
+      float: right; }
+    #timeline-education-comment .timeline-block:nth-child(even) .timeline-content::before {
+      /*horizontal line*/
+      top: 25px;
+      left: auto;
+      right: 101.2%;
+      z-index: -2; }
+    #timeline-education-comment .timeline-block .card-content-noPaddingTop {
       padding-top: 20px; } }
 /*-------------------------------------------------------------------------------
  SKILLS SECTION
@@ -2260,7 +2333,7 @@ footer {
     position: relative;
     display: block;
     width: 100%;
-    height: 80px;
+    min-height: 80px;
     background: url(../images/backgrounds/background.jpg) no-repeat;
     background-size: cover;
     background-position: center center;
@@ -2268,6 +2341,24 @@ footer {
     footer .footer-background p {
       padding: 20px;
       color: #fff; }
+  footer .col-one-third-pad {
+    display: block;
+    position: relative;
+    margin-right: 4%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    float: left;
+    width: 30.63%; }
+  footer .col-two-third-pad {
+    margin-right: 0 !important;
+    clear: right;
+    display: block;
+    position: relative;
+    margin-right: 4%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    float: left;
+    width: 65.33%; }
 
 /*-------------------------------------------------------------------------------
  SINGLE PAGE

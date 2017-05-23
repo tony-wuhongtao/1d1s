@@ -1,0 +1,11 @@
+enabled: true
+built_in_css: true
+display_button: true
+min_query_length: 3
+route: /search
+template: simplesearch_results
+filter_combinator: and
+ignore_accented_characters: false
+order:
+  by: date
+  dir: desc

@@ -31,21 +31,23 @@
 	                        <div class="image">
 	                        	<p class="calendar">{{ item_date|date('d') }}<em>{{ item_date|date('Y年m月') }}</em></p>
 	                            <img alt="blog-image" src="{{ item_img.cropZoom(800,500).url }}"/>
-	                            <div class="image-overlay">
-	                            	<div class="col-md-12 image-overlay-title">
-									  <figure class="port-effect-up">
-									        <figcaption>
-									        	<h4>{{ item_title }}</h4>
-									        </figcaption>
-									  </figure>
-									</div>
-	                                <div class="comments">
-	                                    <i class="fa fa-newspaper-o"></i> Published @
-	                                    <i class="fa fa-date-o"></i>
-	                                    <time datetime="{{ item_date|date('Y/m/d') }}">{{ item_date|date('M d, Y') }}</time>
-	                                    {# <i class="fa fa-comments"></i> 168 #}
-	                                </div>
-	                            </div>
+	                            <a href="{{item.url}}">
+		                            <div class="image-overlay">
+		                            	<div class="col-md-12 image-overlay-title">
+										  <figure class="port-effect-up">
+										        <figcaption>
+										        	<h4>{{ item_title }}</h4>
+										        </figcaption>
+										  </figure>
+										</div>
+		                                <div class="comments">
+		                                    <i class="fa fa-newspaper-o"></i> Published @
+		                                    <i class="fa fa-date-o"></i>
+		                                    <time datetime="{{ item_date|date('Y/m/d') }}">{{ item_date|date('M d, Y') }}</time>
+		                                    {# <i class="fa fa-comments"></i> 168 #}
+		                                </div>
+		                            </div>
+	                            </a>
 	                        </div>
 	                        <!--DETAILS-->
 	                        <div class="content">
