@@ -4,6 +4,44 @@ date: '2017-05-19'
 v_card_sub_title: 向世界表露他的温情
 v_card_vid: 51ed3b4e38e17e030e0757343fd3f10a_5
 v_card_img: xx.jpg
+feedbacks_broadcast:
+    -
+        title: CNN采用截图
+        big_img: showcasetv.jpg
+        style: s1
+        use_default_icon: '1'
+        use_custom_icon: '0'
+    -
+        title: showcasetv
+        sub_title: 采用截图
+        big_img: xx.jpg
+        style: s2
+        use_default_icon: '1'
+        use_custom_icon: '0'
+    -
+        title: Bloomberg
+        sub_title: 采用截图
+        big_img: bloom.jpg
+        style: s1
+        use_default_icon: '1'
+        use_custom_icon: '0'
+feedbacks_comment:
+    -
+        comment_title: 'Christian Eisberg'
+        comment_sub_title: '印度ZEE新闻频道 视频内容高级编辑'
+        comment_content: 我真的非常喜欢这次服装周对于创意和企业的社会责任的重视，当我看到派克兰帝的视频后，我被派克兰帝的公益行为震撼了，我觉得欧洲的企业也需要像派克兰帝关注自闭症儿童一样，多做一些公益慈善的事情
+        comment_img: default_photo.jpg
+        style: s2
+        use_default_icon: '1'
+        use_custom_icon: '0'
+        letter: C
+    -
+        comment_title: 'Angelle Chang'
+        comment_sub_title: '欧洲儿童服装品牌 JOW Junior 创始人'
+        comment_content: “我看了派克兰帝的慈善公益视频后，我感觉非常地触动心灵，我觉得你们为这些特殊孩子所做的公益慈善项目，真是一件非常美好的事情。”
+        style: s1
+        use_default_icon: '1'
+        use_custom_icon: '0'
 feedbacks:
     -
         title: CNN采用截图
