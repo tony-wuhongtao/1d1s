@@ -6,6 +6,8 @@ force_ssl: false
 username_regex: '^[a-z0-9_-]{3,16}$'
 pwd_regex: '(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
 languages:
+  supported:
+    - zh
   include_default_lang: true
   translations: true
   translations_fallback: true
