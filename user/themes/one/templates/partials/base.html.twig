@@ -103,13 +103,31 @@
 {% block footer %}
     <footer>
         <div class="container footer-background">
-            <!--FOOTER DETAILS-->
-            <p class="text-center">
-                © OneDayOneStroy. All right reserved by
-                <a href="http://premium.bon-cloud.net/" target="_blank">
-                    <strong>Bon-Cloud</strong>
-                </a>
-            </p>
+            {% if isMobile() %}
+                <p class="text-center">
+                    <strong>天天全球播，故事千万亿</strong><br>
+                    谁是今天千万亿?<br>
+                    <img class="img-responsive" style="margin: 0 auto;max-width: 50%;" alt="graduation" src="{{ theme_url }}/libs/images/custom/bottom-logo.png">
+                    <ul style="list-style: none;text-align: left;">
+                        <li>地 址：北京市朝阳区东八里庄1号莱锦创意产业园CN16蓝海电视大楼</li>
+                        <li>电 话：010-5227 0866</li>
+                        <li>传 真：010-5227 0999</li>
+                        <li>邮 箱：sales@bon-cloud.com</li>
+                        <li>微信公众号：千万亿全球播</li>
+                    </ul>
+                    © OneDayOneStroy. All right reserved by
+                    <a href="http://premium.bon-cloud.net/" target="_blank">
+                        <strong>Bon-Cloud</strong>
+                    </a>
+                </p>
+            {% else %}
+                <p class="text-center">
+                    © OneDayOneStroy. All right reserved by
+                    <a href="http://premium.bon-cloud.net/" target="_blank">
+                        <strong>Bon-Cloud</strong>
+                    </a>
+                </p>
+            {% endif %}
         </div>
     </footer>
 {% endblock %}

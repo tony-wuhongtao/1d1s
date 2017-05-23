@@ -45,7 +45,7 @@
 {% block javascripts %}
 {% do assets.addInlineJs("
 	$(window).on('scroll',function() {
-	    if ($(window).scrollTop() > $('#feedback').position().top) {
+	    if ($(window).scrollTop() > $('#feedback-broadcast').position().top) {
 	    	$('#modal-btn').click();
 	        $(window).off('scroll');
 	    }
