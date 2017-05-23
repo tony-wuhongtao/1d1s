@@ -2337,6 +2337,24 @@ footer {
     footer .footer-background p {
       padding: 20px;
       color: #fff; }
+  footer .col-one-third-pad {
+    display: block;
+    position: relative;
+    margin-right: 4%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    float: left;
+    width: 30.63%; }
+  footer .col-two-third-pad {
+    margin-right: 0 !important;
+    clear: right;
+    display: block;
+    position: relative;
+    margin-right: 4%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    float: left;
+    width: 65.33%; }
 
 /*-------------------------------------------------------------------------------
  SINGLE PAGE

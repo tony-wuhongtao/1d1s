@@ -4,13 +4,13 @@
 @import "../_abstracts/_variables";
 /*footer section*/
 footer {
-  width: 100%;
-  height: auto;
-  color: $white;
-  margin-top: -18px;
-  // margin-bottom: 9px;
+	width: 100%;
+	height: auto;
+	color: $white;
+	margin-top: -18px;
+	// margin-bottom: 9px;
 
-  .footer-background{
+  	.footer-background{
 	  	position: relative;
 	    display: block;
 	    width: 100%;
@@ -24,5 +24,26 @@ footer {
 	    	padding: 20px;
 	    	color: #fff;
 	    }
-  	}    
+  	}
+  	.col-one-third-pad{
+	    display: block;
+	    position: relative;
+	    margin-right: 4%;
+	    margin-top: 30px;
+	    margin-bottom: 50px;
+	    float: left;
+	    width: 30.63%
+	}
+	.col-two-third-pad{
+	    margin-right: 0 !important;
+    	clear: right;
+	    display: block;
+	    position: relative;
+	    margin-right: 4%;
+	    margin-top: 30px;
+	    margin-bottom: 50px;
+	    float: left;
+	    width: 65.33%;
+	}
+
 }
