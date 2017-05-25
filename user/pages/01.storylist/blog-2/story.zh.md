@@ -1,7 +1,5 @@
 ---
 title: 来自星星的孩子
-content:
-    items: '@self.children'
 date: '2017-05-19'
 v_card_sub_title: 向世界表露他的温情
 v_card_vid: 51ed3b4e38e17e030e0757343fd3f10a_5
@@ -16,7 +14,7 @@ feedbacks_broadcast:
     -
         title: showcasetv
         sub_title: 采用截图
-        big_img: xx.jpg
+        small_img: xx.jpg
         style: s2
         use_default_icon: '1'
         use_custom_icon: '0'
@@ -44,6 +42,8 @@ feedbacks_comment:
         style: s1
         use_default_icon: '1'
         use_custom_icon: '0'
+content:
+    items: '@self.children'
 feedbacks:
     -
         title: CNN采用截图
