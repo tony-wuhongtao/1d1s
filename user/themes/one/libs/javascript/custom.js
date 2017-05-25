@@ -233,9 +233,9 @@
                     }
                     $('#html-video').css({ top: marginTop+'px'});
                 }, 2000);
-                setTimeout(function () {
-                    resume();
-                }, 3000);
+                // setTimeout(function () {
+                //     resume();
+                // }, 3000);
 
             });
 
@@ -246,7 +246,7 @@
                 var playButtonHolder = '#button-holder';
                 var playIcon = '#icon-play';
                 $('body').removeClass('scale-effect');
-                pause();
+                // pause();
                 setTimeout(function () {
                     $(playIcon).show();
                     $(playButtonHolder).removeClass('middle');

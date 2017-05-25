@@ -2541,4 +2541,30 @@ hr {
 #modal-btn {
   visibility: hidden; }
 
+/*-------------------------------------------------------------------------------
+ DETAILS PAGE
+-------------------------------------------------------------------------------*/
+.single-page {
+  margin-top: -220px; }
+
+#details-page {
+  padding-bottom: 30px; }
+  #details-page .section-title h4 {
+    color: #fff; }
+  #details-page header h2 {
+    color: #fff;
+    text-align: center; }
+  #details-page header p {
+    color: #fff; }
+  #details-page .post-body {
+    text-align: center; }
+    #details-page .post-body img {
+      width: 100%; }
+  #details-page .vimage {
+    display: none; }
+
+@media only screen and (min-width: 768px) {
+  #details-page header h2 {
+    text-align: left; } }
+
 /*# sourceMappingURL=style.css.map */
