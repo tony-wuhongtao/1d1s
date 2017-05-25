@@ -1,5 +1,7 @@
 ---
 title: 来自星星的孩子
+content:
+    items: '@self.children'
 date: '2017-05-19'
 v_card_sub_title: 向世界表露他的温情
 v_card_vid: 51ed3b4e38e17e030e0757343fd3f10a_5

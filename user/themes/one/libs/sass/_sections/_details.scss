@@ -1,0 +1,47 @@
+//===========================================================================//
+// DETAILS PAGE
+//===========================================================================//
+@import "../_abstracts/_variables";
+@import "../_mixins/_mediamixins";
+
+.single-page {
+    margin-top: -220px;
+}
+
+#details-page{
+  padding-bottom: 30px;
+  .section-title{
+    h4{
+      color: $white;
+    }
+  }
+  header{
+    h2{
+      color: $white;
+      text-align: center;
+    }
+    p{
+      color: $white;
+    }
+  }
+  .post-body{
+    text-align: center;
+    img{
+      width: 100%;
+    }
+  }
+
+  .vimage{
+    display: none;
+  }
+}
+
+@include screen_min_width_768 {
+  #details-page{
+    header{
+      h2{
+        text-align: left;
+      }
+    }
+  }
+}

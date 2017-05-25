@@ -1,0 +1,78 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+<!--==========================================
+                 SINGLE PORTFOLIO
+===========================================-->
+{% set parent = page.collection().first() %}
+<section id="details-page" class="single-page">
+    <div class="container">
+        <!--SECTION TITLE-->
+        <!-- <div class="section-title">
+            <h4 class="text-uppercase text-center"><img src="{{theme_url}}/libs/images/icons/safe.png" alt="demo">Portfolios</h4>
+        </div> -->
+        <!--PORTFOLIO HOLDER-->
+        <div class="row" id="primary">
+            <!--PORTFOLIO CONTENT-->
+            <div id="content" class="col-sm-12">
+                <div class="post card">
+                    <!--PORTFOLIO IMAGE SLIDER-->
+                    <div class="post-image">
+
+                        <!-- SLIDER STRUCTURE -->
+                        <div id="clients-slider"
+                             class="swiper-container swiper-container-portfolios">
+                            <div class="swiper-wrapper">
+                                <div id="vid" style="display:none">{{parent.header.v_card_vid}}</div>
+                                {% set image = parent.media[parent.header.v_card_img] %}
+                                {% if image %}                        
+                                    <img id="vimage" alt="profile-image" class="img-responsive" src="{{ image.cropZoom(1080,536).url }}" style="display:none;">
+                                {% else %}
+                                    <img id="vimage" alt="profile-image" class="img-responsive" src="{{theme_url}}/libs/images/portfolio-single/single-1.jpg" style="display:none;">
+                                {% endif %}
+                    
+                                <div id='html-video-description'></div>
+                            </div>
+                            <!-- ADD PAGINATION -->
+                            <div class="swiper-pagination swiper-pagination-portfolios"></div>
+                        </div>
+
+                    </div>
+
+                    <!--PORTFOLIO TITLE AND DETAILS-->
+                    <header>
+                        <div class="col-md-10">
+                            <h2>{{parent.title}}</h2>
+                        </div>
+                        <div class="col-md-2">
+                            <time datetime="2045-08-16">{{parent.header.date|date('Y年m月d日')}}</time>
+                        </div>
+                        <div class="clearfix"></div>
+                        <!-- <p><strong>{{parent.header.v_card_sub_title}}</strong></p> -->
+                    </header>
+                    <!--BODY-->
+                    <div class="post-body">
+                        <h3>内容介绍</h3>
+                        {{content}}
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script src='//player.polyv.net/script/polyvplayer.min.js'></script>
+{% do assets.addInlineJs("var vcardWidth = $('#content').width();
+    var videoHeight = vcardWidth/16*9;
+    var vid = $('#vid').text();
+    var vimage = $('#vimage').attr('src');
+    var player = polyvObject('#html-video-description').videoPlayer({
+        'width' : vcardWidth,
+        'height' : videoHeight,
+        'vid' : vid,
+        'loading_bg_img' : vimage,
+    });", 84) %}
+{% endblock %}

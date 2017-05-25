@@ -4,6 +4,8 @@
 <!--==========================================
                    V-CARD
 ===========================================-->
+{% set child = page.collection().first() %}
+{{ dump(child.url) }}
 <div id="v-card-holder" class="section">
     <div class="container">
         <div class="row">
@@ -114,7 +116,7 @@
                         <div class="about-btn">
 
                             <!-- DOWNLOAD CV BUTTON -->
-                            <a href="#" class="btn waves-effect">下载传播效果报告</a>
+                            <a href="{{child.url}}" class="btn waves-effect">故事介绍</a>
                             <a href="#" data-toggle="modal" data-target="#advModal" class="btn waves-effect">我有好故事</a>
                         </div>
                     </div>
@@ -493,14 +495,15 @@
     ", 88) %}
 
 {% do assets.addInlineJs("
-    var timeline_broadcast_div_height = $('#timeline-education-broadcast').height();
-    var last_broadcast_div_top = $('#timeline-education-broadcast .timeline-block:last-child').height();
-    var line_height_broadcast = timeline_broadcast_div_height - last_broadcast_div_top;
+    setTimeout(function(){
+        var timeline_broadcast_div_height = $('#timeline-education-broadcast').height();
+        var last_broadcast_div_top = $('#timeline-education-broadcast .timeline-block:last-child').height();
+        var line_height_broadcast = timeline_broadcast_div_height - last_broadcast_div_top;
 
-    var timeline_comment_div_height = $('#timeline-education-comment').height();
-    var last_comment_div_top = $('#timeline-education-comment .timeline-block:last-child').height();
-    var line_height_comment = timeline_comment_div_height - last_comment_div_top;
+        var timeline_comment_div_height = $('#timeline-education-comment').height();
+        var last_comment_div_top = $('#timeline-education-comment .timeline-block:last-child').height();
+        var line_height_comment = timeline_comment_div_height - last_comment_div_top;
 
-    $('#timeline-education-comment').append('<style>#timeline-education-comment::before{height: '+line_height_comment+'px}#timeline-education-broadcast::before{height: '+line_height_broadcast+'px}</style>')
+        $('#timeline-education-comment').append('<style>#timeline-education-comment::before{height: '+line_height_comment+'px}#timeline-education-broadcast::before{height: '+line_height_broadcast+'px}</style>')}, 500)
     ", 86) %}
 {% endblock %}
