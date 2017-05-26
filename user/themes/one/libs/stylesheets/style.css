@@ -2546,6 +2546,10 @@ hr {
 -------------------------------------------------------------------------------*/
 .single-page {
   margin-top: -220px; }
+  .single-page .post header time {
+    font-size: 14px;
+    float: right;
+    margin-top: 15px; }
 
 #details-page {
   padding-bottom: 30px; }
@@ -2553,7 +2557,8 @@ hr {
     color: #fff; }
   #details-page header h2 {
     color: #fff;
-    text-align: center; }
+    text-align: left;
+    margin-top: 10px; }
   #details-page header p {
     color: #fff; }
   #details-page .post-body {
@@ -2563,8 +2568,9 @@ hr {
   #details-page .vimage {
     display: none; }
 
-@media only screen and (min-width: 768px) {
+@media screen and (max-width: 990px) {
   #details-page header h2 {
-    text-align: left; } }
+    text-align: center;
+    margin-top: 10px; } }
 
 /*# sourceMappingURL=style.css.map */

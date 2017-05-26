@@ -6,8 +6,15 @@
 
 .single-page {
     margin-top: -220px;
+    .post{
+      header time {
+      font-size: 14px;
+      float: right;
+      margin-top: 15px;
+    }
+  }
 }
-
+ 
 #details-page{
   padding-bottom: 30px;
   .section-title{
@@ -18,7 +25,8 @@
   header{
     h2{
       color: $white;
-      text-align: center;
+      text-align: left;
+      margin-top: 10px;
     }
     p{
       color: $white;
@@ -36,11 +44,12 @@
   }
 }
 
-@include screen_min_width_768 {
+@include screen_990 {
   #details-page{
     header{
       h2{
-        text-align: left;
+        text-align: center;
+        margin-top: 10px;
       }
     }
   }
