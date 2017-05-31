@@ -30,7 +30,11 @@
 	                        <!--IMAGE-->
 	                        <div class="image">
 	                        	<p class="calendar">{{ item_date|date('d') }}<em>{{ item_date|date('Y年m月') }}</em></p>
-	                            <img alt="blog-image" src="{{ item_img.cropZoom(800,500).url }}"/>
+		                        {% if item_img %}                            
+		                            <img alt="blog-image" src="{{ item_img.cropZoom(800,500).url }}"/>
+		                        {% else %}
+		                            <img alt="profile-image" class="img-responsive" src="{{theme_url}}/libs/images/blog/blog-1.png">
+		                        {% endif %}
 	                            <a href="{{item.url}}">
 		                            <div class="image-overlay">
 		                            	<div class="col-md-12 image-overlay-title">

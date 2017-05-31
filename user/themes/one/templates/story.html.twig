@@ -171,9 +171,14 @@
                                 </h6>
                             </div>
                             {% set big_img = page.media[item.big_img] %}
-                            <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-{{ loop.index }}"><img class="feedback-image"  src="{{ big_img.url }}"></a>
+                            <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-{{ loop.index }}">
+                            {% if big_img %}
+                            <img class="feedback-image"  src="{{ big_img.url }}">
+                            {% else %}
+                            <img class="feedback-image"  src="{{theme_url}}/libs/images/timeline/demo-gra.jpg">
+                            {% endif %}
+                            </a>
                             <div class="clearfix"></div>
-                            
                         </div>
                     </div>
                 </div>  
@@ -219,7 +224,13 @@
                             </div>
                             <div class="col-md-5 noPaddingLeft">
                                 {% set small_img = page.media[item.small_img] %}
-                                <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-{{ loop.index }}"><img class="feedback-image"  src="{{ small_img.url }}"></a>
+                                <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-{{ loop.index }}">
+                                {% if small_img %}
+                                <img class="feedback-image"  src="{{ small_img.url }}">
+                                {% else %}
+                                <img class="feedback-image"  src="{{theme_url}}/libs/images/profile/profile.png">
+                                {% endif %}
+                                </a>
                             </div>
                             <div class="clearfix"></div>
                             
@@ -256,7 +267,11 @@
                     <!--MODAL BODY-->
                     <div class="modal-body">
                         {% set big_img = page.media[item.big_img] %}
+                        {% if big_img %}
                         <img src="{{ big_img.url }}" alt="{{ item.title }}"></img>
+                        {% else %}
+                        <img class="feedback-image"  src="{{theme_url}}/libs/images/timeline/demo-gra.jpg">
+                        {% endif %}
                         {{ item.content }}
                     </div>
                     <!--MODAL FOOTER-->
@@ -289,7 +304,11 @@
                         </div>
                         <div class="col-md-5">
                             {% set small_img = page.media[item.small_img] %}
+                            {% if small_img %}
                                 <img src="{{ small_img.url }}" alt="{{ item.title }}"></img>
+                            {% else %}
+                                <img class="feedback-image"  src="{{theme_url}}/libs/images/profile/profile.png">
+                            {% endif %}
                         </div>
                     </div>
                     <!--MODAL FOOTER-->
@@ -386,8 +405,11 @@
                         <div class="card timeline-content">
                             <div class="col-md-3 noPaddingRight">
                                 {% set photo = page.media[item.comment_img] %}
+                                {% if photo %}
                                 <img class="author-portfolio" src="{{ photo.url }}">
-                                
+                                {% else %}
+                                <img class="author-portfolio" src="{{ theme_url }}/libs/images/clients/default_photo.jpg">
+                                {% endif %}
                             </div>
                             <div class="col-md-9 noPaddingLeft">
                                 <div class="card-content">
