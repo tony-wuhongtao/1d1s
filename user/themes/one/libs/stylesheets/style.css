@@ -2331,7 +2331,8 @@ footer {
   width: 100%;
   height: auto;
   color: #fff;
-  margin-top: -18px; }
+  margin-top: -18px;
+  margin-bottom: 0px !important; }
   footer .footer-background {
     position: relative;
     display: block;
@@ -2344,15 +2345,15 @@ footer {
     footer .footer-background p {
       padding: 20px;
       color: #fff; }
-  footer .col-one-third-pad {
+  footer .col-one-fifth-pad {
     display: block;
     position: relative;
     margin-right: 4%;
     margin-top: 30px;
     margin-bottom: 50px;
     float: left;
-    width: 30.63%; }
-  footer .col-two-third-pad {
+    width: 16.8%; }
+  footer .col-two-fifth-pad {
     margin-right: 0 !important;
     clear: right;
     display: block;
@@ -2361,7 +2362,7 @@ footer {
     margin-top: 30px;
     margin-bottom: 50px;
     float: left;
-    width: 65.33%; }
+    width: 37.6%; }
 
 /*-------------------------------------------------------------------------------
  SINGLE PAGE

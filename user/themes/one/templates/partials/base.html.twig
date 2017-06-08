@@ -108,7 +108,8 @@
                 <p class="text-center">
                     <strong>天天全球播，故事千万亿</strong><br>
                     谁是今天千万亿?<br>
-                    <img class="img-responsive" style="margin: 0 auto;max-width: 50%;" alt="graduation" src="{{ theme_url }}/libs/images/custom/bottom-logo.png">
+                    <img class="img-responsive" style="margin: 0 auto;max-width: 50%;display: inline-block;" src="{{ theme_url }}/libs/images/custom/bottom-logo-bottom.png">
+                    <img class="img-responsive" style="width: 80px;margin-left: 20px;display: inline-block;" alt="Bon Cloud" src="{{ theme_url }}/libs/images/custom/qrcode.png">
                     <ul style="list-style: none;text-align: left;">
                         <li>地 址：北京市朝阳区东八里庄1号莱锦创意产业园CN16蓝海电视大楼</li>
                         <li>电 话：010-5227 0866</li>
@@ -122,14 +123,14 @@
                     </a>
                 </p>
             {% elseif isTablet() %}
-                <div class="col-one-third-pad">
-                    <img class="img-responsive" style="margin: 0 auto;max-width: 50%;" alt="graduation" src="{{ theme_url }}/libs/images/custom/bottom-logo.png">
+                <div class="col-two-fifth-pad">
+                    <img class="img-responsive" style="margin: 0 auto;max-width: 70%;" src="{{ theme_url }}/libs/images/custom/bottom-logo-bottom.png">
                     <p class="text-center">
                         <strong>天天全球播，故事千万亿</strong><br>
                         谁是今天千万亿?<br>
                     </p>
                 </div>
-                <div class="col-two-third-pad">
+                <div class="col-two-fifth-pad">
                     <ul style="list-style: none;text-align: left;">
                         <li>地 址：北京市朝阳区东八里庄1号莱锦创意产业园CN16蓝海电视大楼</li>
                         <li>电 话：010-5227 0866</li>
@@ -142,8 +143,17 @@
                         <strong>Bon-Cloud</strong>
                     </a>
                 </div>
+                <div class="col-one-fifth-pad">
+                    <img class="img-responsive" style="margin: 0 auto;max-width: 90%;" alt="Bon Cloud" src="{{ theme_url }}/libs/images/custom/qrcode.png">
+                </div>
                 <div class="clearfix"></div>
             {% else %}
+                <div style="margin: 0 auto;padding: 20px 20px 0;">
+                    <div style="margin: 0 auto;width: 350px;">
+                        <img class="img-responsive" style="width: 180px;float: left;display: inline-block;" src="{{ theme_url }}/libs/images/custom/bottom-logo-bottom.png">
+                        <img class="img-responsive" style="width: 90px;margin-left: 50px;display: inline-block;" alt="Bon Cloud" src="{{ theme_url }}/libs/images/custom/qrcode.png">
+                    </div>
+                </div>
                 <p class="text-center">
                     © OneDayOneStroy. All right reserved by
                     <a href="http://premium.bon-cloud.net/" target="_blank">

@@ -8,7 +8,7 @@ footer {
 	height: auto;
 	color: $white;
 	margin-top: -18px;
-	// margin-bottom: 9px;
+	margin-bottom: 0px !important;
 
   	.footer-background{
 	  	position: relative;
@@ -25,16 +25,16 @@ footer {
 	    	color: #fff;
 	    }
   	}
-  	.col-one-third-pad{
+  	.col-one-fifth-pad{
 	    display: block;
 	    position: relative;
 	    margin-right: 4%;
 	    margin-top: 30px;
 	    margin-bottom: 50px;
 	    float: left;
-	    width: 30.63%
+	    width: 16.8%;
 	}
-	.col-two-third-pad{
+	.col-two-fifth-pad{
 	    margin-right: 0 !important;
     	clear: right;
 	    display: block;
@@ -43,7 +43,7 @@ footer {
 	    margin-top: 30px;
 	    margin-bottom: 50px;
 	    float: left;
-	    width: 65.33%;
+	    width: 37.6%;
 	}
 
 }
