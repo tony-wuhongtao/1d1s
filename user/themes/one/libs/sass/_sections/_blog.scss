@@ -29,17 +29,17 @@
     display:block;
     font:normal bold 11px/30px Arial, Helvetica, sans-serif;
     color:#fff;
-    text-shadow:$primary-color-dark 0 -1px 0; 
-    background:$primary-color;
-    background:-webkit-gradient(linear, left top, left bottom, from($primary-color), to($primary-color-dark)); 
-    background:-moz-linear-gradient(top,  $primary-color,  $primary-color-dark); 
+    text-shadow:$accent-color-dark 0 -1px 0; 
+    background:$accent-color;
+    background:-webkit-gradient(linear, left top, left bottom, from($accent-color), to($accent-color-dark)); 
+    background:-moz-linear-gradient(top,  $accent-color,  $accent-color-dark); 
     -moz-border-radius-bottomright:3px;
     -webkit-border-bottom-right-radius:3px; 
     border-bottom-right-radius:3px;
     -moz-border-radius-bottomleft:3px;
     -webkit-border-bottom-left-radius:3px;  
     border-bottom-left-radius:3px;  
-    border-top:1px solid $primary-color-dark;
+    border-top:1px solid $accent-color-dark;
     &:before, &:after{
       content:'';
       float:left;
