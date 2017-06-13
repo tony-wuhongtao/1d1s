@@ -17,7 +17,7 @@
     height: 99.5%;
     width: 4px;
     opacity: 0.3;
-    background: $primary-color;
+    background: $accent-color;
   }
 }
 
@@ -34,7 +34,7 @@
     height: 99.5%;
     width: 4px;
     opacity: 0.3;
-    background: $primary-color;
+    background: $accent-color;
   }
 }
 
@@ -51,7 +51,7 @@
     height: 99.5%;
     width: 4px;
     opacity: 0.3;
-    background: $primary-color;
+    background: $accent-color;
   }
 }
 
@@ -130,7 +130,7 @@
       padding-top: 16px;
       text-align: center;
       display: inline-block;
-      background-color: $primary-color;
+      background-color: $accent-color;
     }
 
   }
@@ -141,7 +141,7 @@
 
   .timeline-dot {
     /*timeline dot*/
-    background: $primary-color;
+    background: $accent-color;
     width: 50px;
     height: 50px;
     border-radius: 100%;
@@ -182,7 +182,7 @@
     margin-right: 0;
     z-index: 1;
     margin-bottom: 5px;
-    border-left: 5px solid $accent-color;
+    border-left: 5px solid $primary-color;
 
     &::before {
       /*horizontal line*/
@@ -194,7 +194,7 @@
       left: 100%;
       z-index: -2;
       opacity: 0.4;
-      background: $primary-color;
+      background: $accent-color;
     }
     &::after {
       /*horizontal line*/
@@ -254,7 +254,7 @@
     margin-left: -2px;
     height: 77.1%;
     opacity: 0.4;
-    background: $primary-color;
+    background: $accent-color;
   }
   #timeline-education-comment::before {
     /*vertical line for education in in min width 768 */
@@ -262,7 +262,7 @@
     margin-left: -2px;
     height: 77.1%;
     opacity: 0.4;
-    background: $primary-color;
+    background: $accent-color;
   }
   #timeline-experience::before {
     /*vertical line for experience in min width 768 */
@@ -270,7 +270,7 @@
     margin-left: -2px;
     height: 69.1%;
     opacity: 0.4;
-    background: $primary-color;
+    background: $accent-color;
   }
   #timeline-education-broadcast{
 

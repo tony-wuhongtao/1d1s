@@ -15,7 +15,7 @@ footer {
 	    display: block;
 	    width: 100%;
 	    min-height: 80px;
-	    background: url(../images/backgrounds/background.jpg) no-repeat;
+	    background: #272822;
 	    background-size: cover;
 	    background-position: center center;
 	    background-attachment: fixed;
@@ -45,5 +45,12 @@ footer {
 	    float: left;
 	    width: 37.6%;
 	}
-
+	.container{
+		a{
+			color: $accent-color-dark;
+			&:hover{
+				color: $accent-color;
+			}
+		}
+	}
 }

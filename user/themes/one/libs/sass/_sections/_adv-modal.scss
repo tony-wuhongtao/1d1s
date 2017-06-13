@@ -1,3 +1,11 @@
+@import "../_abstracts/_variables";
+
 #modal-btn{
 	visibility: hidden;
+}
+
+#advModal{
+	.modal-title{
+		color: $accent-color;
+	}
 }

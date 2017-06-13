@@ -100,29 +100,29 @@
     /*menu toggle style*/
     position: absolute;
     top: 20px;
-    right: -65px;
+    right: -70px;
     z-index: 11;
     display: block;
     text-align: center;
     font-size: 14px;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     line-height: 40px;
     cursor: pointer;
     border: 1px solid rgba(93, 92, 92, 0.52);
-    background: rgba(0, 0, 0, 0.06);
+    background: $accent-color;//rgba(0, 0, 0, 0.06);
     transition: all .5s ease-in-out;
     &:hover {
       /*toggle hover style*/
-      background: $overlay;
+      background: $accent-color-light;
       transition: all .5s ease-in-out;
     }
     .toggle-normal {
-      font-size: 31px;
+      font-size: 41px;
       i {
-        font-size: 31px;
+        font-size: 41px;
         padding: 4px;
-        color: $accent-color;
+        color: $white;
       }
       .top-bar {
         position: absolute;
@@ -149,8 +149,8 @@
     .top-transform {
       -webkit-transform: rotate(45deg) !important;
       transform: rotate(45deg) !important;
-      -webkit-transform-origin: 34% 56%;
-      transform-origin: 34% 56%;
+      -webkit-transform-origin: 38% 58%;
+      transform-origin: 38% 58%;
     }
     .middle-transform {
       opacity: 0 !important;
@@ -158,8 +158,8 @@
     .bottom-transform {
       -webkit-transform: rotate(-45deg) !important;
       transform: rotate(-45deg) !important;
-      -webkit-transform-origin: 28% 43%;
-      transform-origin: 28% 43%;
+      -webkit-transform-origin: 35% 40%;
+      transform-origin: 35% 40%;
     }
   }
 
@@ -169,7 +169,7 @@
     display: block;
     width: 100%;
     height: 370px;
-    background: url(#{$rootPath}/images/backgrounds/background.jpg) no-repeat;
+    background: url(#{$rootPath}/images/custom/test.jpg) no-repeat;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;

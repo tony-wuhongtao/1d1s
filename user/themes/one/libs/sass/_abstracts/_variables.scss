@@ -6,8 +6,11 @@
 ///*                      PRIMARY AND ACCENT COLORS                         */
 ///*    SIX PROVIDED COLORS CAN BE FOUND ON FOLDER COLORS/COLORS.TXT        */
 ///*========================================================================*/
-$primary-color: #616161;
-$accent-color: #F44336;
+$primary-color: #2b2b2b;
+$accent-color: #ef9a16;
+$timeline-border: #ef9a16;
+$v-card: #2b2b2b;
+$text-color: #b5b5b5;
 
 $primary-color-light: lighten($primary-color, 7%);
 $primary-color-dark: darken($primary-color, 3%);
@@ -46,9 +49,9 @@ $text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
 ///*=======================================*/
 ///*           V-CARD COLORS               */
 ///*=======================================*/
-$slant-bg: $primary-color;
-$v-card-bg: $primary-color;
-$text-icon-color: $white;
+$slant-bg: $v-card;
+$v-card-bg: $v-card;
+$text-icon-color: $text-color;
 
 ///*=======================================*/
 ///*       EXTRA COLORS AND OVERLAY        */
@@ -57,7 +60,7 @@ $overlay: rgba(0, 0, 0, .3);
 $port_overlay: rgba(0, 0, 0, .7);
 $port_h2: rgba(72, 76, 97, 0.22);
 $port_p: $white;
-$menu-bg: $primary-color;
+$menu-bg: $accent-color;
 $box-inner: $accent-color;
 
 ///*=======================================*/

@@ -18,13 +18,13 @@
     .btn {
       /*button style*/
       margin: 7px 7px;
-      background: $primary-color;
+      background: $accent-color;
       color: $white;
       width: 180px;
       border-radius: 2px;
       &:hover {
        /*hover effect*/
-        background: $primary-color-dark;
+        background: $accent-color-dark;
       }
     }
   }

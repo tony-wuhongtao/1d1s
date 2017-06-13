@@ -14,7 +14,7 @@
     <div class="container">
         <!-- SECTION TITLE -->
         <div class="section-title">
-            <h4 class="text-uppercase text-center"><img src="{{theme_url}}/libs/images/icons/post-it.png" alt="demo">History List</h4>
+            <h4 class="text-uppercase text-center"><img src="{{theme_url}}/libs/images/custom/history-icon.png">往日精彩故事</h4>
         </div>
         <div id="blog-card" class="row">
             <div class="col-md-12 col-sm-12">
@@ -57,7 +57,7 @@
 	                        <div class="content">
 	                            <h6>{{ item_title }}</h6>
 	                            <p>
-	                                {{ item_content |truncate(200, true)}}
+	                                {{ item_content |truncate(100)}}
 	                            </p>
 	                            <a class="forward" href="{{item.url}}">Read More</a>
 	                        </div>

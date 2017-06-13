@@ -3,7 +3,7 @@ title: 来自星星的孩子，向世界表露他的温情
 date: '2017-06-05'
 v_card_sub_title: 关注“星星的孩子”，星空下闪烁的光芒
 v_card_vid: 51ed3b4e38e17e030e0757343fd3f10a_5
-v_card_img: image-7.jpg
+v_card_img: image-1.jpg
 feedbacks_broadcast:
     -
         title: 'CNN 采用截图'

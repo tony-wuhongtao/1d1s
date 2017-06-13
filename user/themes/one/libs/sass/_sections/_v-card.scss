@@ -19,7 +19,8 @@
     overflow: hidden;
     transition: height 1s, color 1s, margin 1s;
     z-index: 1;
-    background: $v-card-bg;
+    background: url(#{$rootPath}/images/custom/bg2.jpg);
+    // background: $v-card-bg;
     margin: -33px 3px 0 0;
 
     .info-headings {
@@ -30,7 +31,7 @@
         display: block;
         width: 100%;
         font-weight: $font-weight-ultra-bold;
-        color: $text-icon-color;
+        color: $accent-color;
         text-shadow: $text-shadow;
       }
       h6 {
@@ -38,11 +39,11 @@
         display: block;
         width: 100%;
         font-weight: $font-weight-light;
-        margin-top: -10px;
+        margin-top: 0px;
         margin-bottom: 30px;
         font-size: 1.2em;
         color: $text-icon-color;
-        text-shadow: $text-shadow;
+        // text-shadow: $text-shadow;
       }
     }
     .infos {
@@ -72,7 +73,7 @@
           margin-left: 0px !important;
           font-size: 15px;
           font-weight: 400;
-          line-height: 20px;
+          line-height: 22px;
           color: $text-icon-color;
           p{
             text-align: left;
@@ -186,6 +187,7 @@
         border-style: solid;
         border-width: 400px 0 0 100px;
         border-color: rgba(223, 50, 50, 0) transparent transparent $slant-bg;
+        // border-color: rgba(223, 50, 50, 0) transparent transparent $slant-bg;
       }
       .add-btn {
         /*plus button*/
