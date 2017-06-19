@@ -249,6 +249,14 @@
       }
     }
   }
+
+  @include phone_480 {
+    .blog {
+      .image {
+        height: 15em;
+      }
+    }
+  }
 }
 
 #pagination{
